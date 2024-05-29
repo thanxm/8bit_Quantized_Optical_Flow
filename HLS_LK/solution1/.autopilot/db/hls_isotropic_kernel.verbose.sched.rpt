@@ -1,0 +1,455 @@
+
+
+================================================================
+== Vivado HLS Report for 'hls_isotropic_kernel'
+================================================================
+* Date:           Mon Mar  1 13:00:51 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        HLS_LK
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.964|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.96>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%window_24_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_24_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 3 'read' 'window_24_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%window_23_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_23_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 4 'read' 'window_23_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%window_22_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_22_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 5 'read' 'window_22_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%window_21_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_21_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 6 'read' 'window_21_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%window_20_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_20_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 7 'read' 'window_20_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%window_19_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_19_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 8 'read' 'window_19_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%window_18_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_18_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 9 'read' 'window_18_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%window_17_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_17_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 10 'read' 'window_17_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%window_16_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_16_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 11 'read' 'window_16_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%window_15_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_15_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 12 'read' 'window_15_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%window_14_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_14_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 13 'read' 'window_14_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%window_13_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_13_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 14 'read' 'window_13_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%window_12_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_12_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 15 'read' 'window_12_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%window_11_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_11_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 16 'read' 'window_11_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%window_10_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_10_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 17 'read' 'window_10_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%window_9_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_9_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 18 'read' 'window_9_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%window_8_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_8_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 19 'read' 'window_8_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%window_7_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_7_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 20 'read' 'window_7_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%window_6_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_6_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 21 'read' 'window_6_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%window_5_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_5_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 22 'read' 'window_5_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%window_4_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_4_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 23 'read' 'window_4_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%window_3_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_3_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 24 'read' 'window_3_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%window_2_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_2_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 25 'read' 'window_2_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%window_1_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_1_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 26 'read' 'window_1_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%window_0_V_read_1 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %window_0_V_read)" [LKof_hls_opt.cpp:260]   --->   Operation 27 'read' 'window_0_V_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_4 = trunc i24 %window_0_V_read_1 to i12" [LKof_hls_opt.cpp:279]   --->   Operation 28 'trunc' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_Result_8 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_0_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:280]   --->   Operation 29 'partselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_71_0_cast = zext i12 %tmp_4 to i15" [LKof_hls_opt.cpp:286]   --->   Operation 30 'zext' 'tmp_71_0_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_72_0_cast = zext i12 %p_Result_8 to i15" [LKof_hls_opt.cpp:279]   --->   Operation 31 'zext' 'tmp_72_0_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_6 = trunc i24 %window_1_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 32 'trunc' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%ret_V_0_1 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_6, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 33 'bitconcatenate' 'ret_V_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_2 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_1_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 34 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%ret_V_4_0_1 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_2, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 35 'bitconcatenate' 'ret_V_4_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_71_0_1_cast = zext i14 %ret_V_0_1 to i15" [LKof_hls_opt.cpp:285]   --->   Operation 36 'zext' 'tmp_71_0_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.83ns)   --->   "%accum1_1_0_1 = add i15 %tmp_71_0_1_cast, %tmp_71_0_cast" [LKof_hls_opt.cpp:285]   --->   Operation 37 'add' 'accum1_1_0_1' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%accum1_1_0_1_cast_ca = zext i15 %accum1_1_0_1 to i17" [LKof_hls_opt.cpp:286]   --->   Operation 38 'zext' 'accum1_1_0_1_cast_ca' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_72_0_1_cast = zext i14 %ret_V_4_0_1 to i15" [LKof_hls_opt.cpp:286]   --->   Operation 39 'zext' 'tmp_72_0_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.83ns)   --->   "%accum2_1_0_1 = add i15 %tmp_72_0_1_cast, %tmp_72_0_cast" [LKof_hls_opt.cpp:286]   --->   Operation 40 'add' 'accum2_1_0_1' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%accum2_1_0_1_cast_ca = zext i15 %accum2_1_0_1 to i17" [LKof_hls_opt.cpp:279]   --->   Operation 41 'zext' 'accum2_1_0_1_cast_ca' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_7 = trunc i24 %window_2_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 42 'trunc' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_shl1 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_7, i3 0)" [LKof_hls_opt.cpp:282]   --->   Operation 43 'bitconcatenate' 'p_shl1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i15 %p_shl1 to i16" [LKof_hls_opt.cpp:282]   --->   Operation 44 'zext' 'p_shl1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_shl2 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_7, i1 false)" [LKof_hls_opt.cpp:282]   --->   Operation 45 'bitconcatenate' 'p_shl2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_shl2_cast = zext i13 %p_shl2 to i16" [LKof_hls_opt.cpp:282]   --->   Operation 46 'zext' 'p_shl2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.84ns)   --->   "%ret_V_0_2 = sub i16 %p_shl1_cast, %p_shl2_cast" [LKof_hls_opt.cpp:282]   --->   Operation 47 'sub' 'ret_V_0_2' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%ret_V_0_2_cast = sext i16 %ret_V_0_2 to i19" [LKof_hls_opt.cpp:282]   --->   Operation 48 'sext' 'ret_V_0_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_5 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_2_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 49 'partselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_shl3 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_5, i3 0)" [LKof_hls_opt.cpp:283]   --->   Operation 50 'bitconcatenate' 'p_shl3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_shl3_cast = zext i15 %p_shl3 to i16" [LKof_hls_opt.cpp:283]   --->   Operation 51 'zext' 'p_shl3_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_shl4 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_5, i1 false)" [LKof_hls_opt.cpp:283]   --->   Operation 52 'bitconcatenate' 'p_shl4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_shl4_cast = zext i13 %p_shl4 to i16" [LKof_hls_opt.cpp:283]   --->   Operation 53 'zext' 'p_shl4_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.84ns)   --->   "%ret_V_4_0_2 = sub i16 %p_shl3_cast, %p_shl4_cast" [LKof_hls_opt.cpp:283]   --->   Operation 54 'sub' 'ret_V_4_0_2' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%ret_V_4_0_2_cast = sext i16 %ret_V_4_0_2 to i19" [LKof_hls_opt.cpp:283]   --->   Operation 55 'sext' 'ret_V_4_0_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_71_0_2_cast = zext i19 %ret_V_0_2_cast to i20" [LKof_hls_opt.cpp:285]   --->   Operation 56 'zext' 'tmp_71_0_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_72_0_2_cast = zext i19 %ret_V_4_0_2_cast to i20" [LKof_hls_opt.cpp:286]   --->   Operation 57 'zext' 'tmp_72_0_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_9 = trunc i24 %window_3_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 58 'trunc' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%ret_V_0_3 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_9, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 59 'bitconcatenate' 'ret_V_0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_8 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_3_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 60 'partselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%ret_V_4_0_3 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_8, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 61 'bitconcatenate' 'ret_V_4_0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_71_0_3_cast_cast = zext i14 %ret_V_0_3 to i16" [LKof_hls_opt.cpp:286]   --->   Operation 62 'zext' 'tmp_71_0_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_72_0_3_cast_cast = zext i14 %ret_V_4_0_3 to i16" [LKof_hls_opt.cpp:279]   --->   Operation 63 'zext' 'tmp_72_0_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_11 = trunc i24 %window_4_V_read_1 to i12" [LKof_hls_opt.cpp:279]   --->   Operation 64 'trunc' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_Result_8_0_4 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_4_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:280]   --->   Operation 65 'partselect' 'p_Result_8_0_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_71_0_4_cast_cast = zext i12 %tmp_11 to i15" [LKof_hls_opt.cpp:286]   --->   Operation 66 'zext' 'tmp_71_0_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_72_0_4_cast_cast = zext i12 %p_Result_8_0_4 to i15" [LKof_hls_opt.cpp:279]   --->   Operation 67 'zext' 'tmp_72_0_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_13 = trunc i24 %window_5_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 68 'trunc' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%ret_V_1 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_13, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 69 'bitconcatenate' 'ret_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_s = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_5_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 70 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%ret_V_4_1 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_s, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 71 'bitconcatenate' 'ret_V_4_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_71_1_cast_cast = zext i14 %ret_V_1 to i15" [LKof_hls_opt.cpp:286]   --->   Operation 72 'zext' 'tmp_71_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_72_1_cast_cast = zext i14 %ret_V_4_1 to i15" [LKof_hls_opt.cpp:279]   --->   Operation 73 'zext' 'tmp_72_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_14 = trunc i24 %window_6_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 74 'trunc' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%ret_V_1_1 = call i16 @_ssdm_op_BitConcatenate.i16.i12.i4(i12 %tmp_14, i4 0)" [LKof_hls_opt.cpp:282]   --->   Operation 75 'bitconcatenate' 'ret_V_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_1 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_6_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 76 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%ret_V_4_1_1 = call i16 @_ssdm_op_BitConcatenate.i16.i12.i4(i12 %tmp_1, i4 0)" [LKof_hls_opt.cpp:283]   --->   Operation 77 'bitconcatenate' 'ret_V_4_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_71_1_1_cast_cast = zext i16 %ret_V_1_1 to i17" [LKof_hls_opt.cpp:285]   --->   Operation 78 'zext' 'tmp_71_1_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.85ns)   --->   "%tmp1 = add i17 %tmp_71_1_1_cast_cast, %accum1_1_0_1_cast_ca" [LKof_hls_opt.cpp:285]   --->   Operation 79 'add' 'tmp1' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%tmp1_cast = zext i17 %tmp1 to i20" [LKof_hls_opt.cpp:285]   --->   Operation 80 'zext' 'tmp1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.88ns)   --->   "%tmp = add i20 %tmp1_cast, %tmp_71_0_2_cast" [LKof_hls_opt.cpp:285]   --->   Operation 81 'add' 'tmp' <Predicate = true> <Delay = 0.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 82 [1/1] (0.83ns)   --->   "%tmp3 = add i15 %tmp_71_1_cast_cast, %tmp_71_0_4_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 82 'add' 'tmp3' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%tmp3_cast = zext i15 %tmp3 to i16" [LKof_hls_opt.cpp:285]   --->   Operation 83 'zext' 'tmp3_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.84ns)   --->   "%tmp2 = add i16 %tmp3_cast, %tmp_71_0_3_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 84 'add' 'tmp2' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%tmp2_cast = zext i16 %tmp2 to i20" [LKof_hls_opt.cpp:285]   --->   Operation 85 'zext' 'tmp2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%accum1_1_1_1 = add i20 %tmp2_cast, %tmp" [LKof_hls_opt.cpp:285]   --->   Operation 86 'add' 'accum1_1_1_1' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_72_1_1_cast_cast = zext i16 %ret_V_4_1_1 to i17" [LKof_hls_opt.cpp:286]   --->   Operation 87 'zext' 'tmp_72_1_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.85ns)   --->   "%tmp5 = add i17 %tmp_72_1_1_cast_cast, %accum2_1_0_1_cast_ca" [LKof_hls_opt.cpp:286]   --->   Operation 88 'add' 'tmp5' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%tmp5_cast = zext i17 %tmp5 to i20" [LKof_hls_opt.cpp:286]   --->   Operation 89 'zext' 'tmp5_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.88ns)   --->   "%tmp4 = add i20 %tmp5_cast, %tmp_72_0_2_cast" [LKof_hls_opt.cpp:286]   --->   Operation 90 'add' 'tmp4' <Predicate = true> <Delay = 0.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 91 [1/1] (0.83ns)   --->   "%tmp7 = add i15 %tmp_72_1_cast_cast, %tmp_72_0_4_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 91 'add' 'tmp7' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%tmp7_cast = zext i15 %tmp7 to i16" [LKof_hls_opt.cpp:286]   --->   Operation 92 'zext' 'tmp7_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.84ns)   --->   "%tmp6 = add i16 %tmp7_cast, %tmp_72_0_3_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 93 'add' 'tmp6' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%tmp6_cast = zext i16 %tmp6 to i20" [LKof_hls_opt.cpp:286]   --->   Operation 94 'zext' 'tmp6_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%accum2_1_1_1 = add i20 %tmp6_cast, %tmp4" [LKof_hls_opt.cpp:286]   --->   Operation 95 'add' 'accum2_1_1_1' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_16 = trunc i24 %window_7_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 96 'trunc' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%p_shl5 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_16, i5 0)" [LKof_hls_opt.cpp:282]   --->   Operation 97 'bitconcatenate' 'p_shl5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%p_shl5_cast = zext i17 %p_shl5 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 98 'zext' 'p_shl5_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%p_shl6 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_16, i3 0)" [LKof_hls_opt.cpp:282]   --->   Operation 99 'bitconcatenate' 'p_shl6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%p_shl6_cast = zext i15 %p_shl6 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 100 'zext' 'p_shl6_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.86ns)   --->   "%ret_V_1_2 = sub i18 %p_shl5_cast, %p_shl6_cast" [LKof_hls_opt.cpp:282]   --->   Operation 101 'sub' 'ret_V_1_2' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%ret_V_1_2_cast = sext i18 %ret_V_1_2 to i19" [LKof_hls_opt.cpp:282]   --->   Operation 102 'sext' 'ret_V_1_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_3 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_7_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 103 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%p_shl7 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_3, i5 0)" [LKof_hls_opt.cpp:283]   --->   Operation 104 'bitconcatenate' 'p_shl7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%p_shl7_cast = zext i17 %p_shl7 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 105 'zext' 'p_shl7_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%p_shl8 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_3, i3 0)" [LKof_hls_opt.cpp:283]   --->   Operation 106 'bitconcatenate' 'p_shl8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%p_shl8_cast = zext i15 %p_shl8 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 107 'zext' 'p_shl8_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.86ns)   --->   "%ret_V_4_1_2 = sub i18 %p_shl7_cast, %p_shl8_cast" [LKof_hls_opt.cpp:283]   --->   Operation 108 'sub' 'ret_V_4_1_2' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%ret_V_4_1_2_cast = sext i18 %ret_V_4_1_2 to i19" [LKof_hls_opt.cpp:283]   --->   Operation 109 'sext' 'ret_V_4_1_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_71_1_2_cast = zext i19 %ret_V_1_2_cast to i20" [LKof_hls_opt.cpp:286]   --->   Operation 110 'zext' 'tmp_71_1_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%tmp_72_1_2_cast = zext i19 %ret_V_4_1_2_cast to i20" [LKof_hls_opt.cpp:279]   --->   Operation 111 'zext' 'tmp_72_1_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_17 = trunc i24 %window_8_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 112 'trunc' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%ret_V_1_3 = call i16 @_ssdm_op_BitConcatenate.i16.i12.i4(i12 %tmp_17, i4 0)" [LKof_hls_opt.cpp:282]   --->   Operation 113 'bitconcatenate' 'ret_V_1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_10 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_8_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 114 'partselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%ret_V_4_1_3 = call i16 @_ssdm_op_BitConcatenate.i16.i12.i4(i12 %tmp_10, i4 0)" [LKof_hls_opt.cpp:283]   --->   Operation 115 'bitconcatenate' 'ret_V_4_1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%tmp_71_1_3_cast_cast = zext i16 %ret_V_1_3 to i17" [LKof_hls_opt.cpp:286]   --->   Operation 116 'zext' 'tmp_71_1_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_72_1_3_cast_cast = zext i16 %ret_V_4_1_3 to i17" [LKof_hls_opt.cpp:279]   --->   Operation 117 'zext' 'tmp_72_1_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_18 = trunc i24 %window_9_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 118 'trunc' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%ret_V_1_4 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_18, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 119 'bitconcatenate' 'ret_V_1_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_12 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_9_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 120 'partselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%ret_V_4_1_4 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_12, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 121 'bitconcatenate' 'ret_V_4_1_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%tmp_71_1_4_cast_cast = zext i14 %ret_V_1_4 to i17" [LKof_hls_opt.cpp:286]   --->   Operation 122 'zext' 'tmp_71_1_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%tmp_72_1_4_cast_cast = zext i14 %ret_V_4_1_4 to i17" [LKof_hls_opt.cpp:279]   --->   Operation 123 'zext' 'tmp_72_1_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%tmp_19 = trunc i24 %window_10_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 124 'trunc' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%p_shl9 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_19, i3 0)" [LKof_hls_opt.cpp:282]   --->   Operation 125 'bitconcatenate' 'p_shl9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%p_shl9_cast = zext i15 %p_shl9 to i16" [LKof_hls_opt.cpp:282]   --->   Operation 126 'zext' 'p_shl9_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%p_shl10 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_19, i1 false)" [LKof_hls_opt.cpp:282]   --->   Operation 127 'bitconcatenate' 'p_shl10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%p_shl10_cast = zext i13 %p_shl10 to i16" [LKof_hls_opt.cpp:282]   --->   Operation 128 'zext' 'p_shl10_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.84ns)   --->   "%ret_V_2 = sub i16 %p_shl9_cast, %p_shl10_cast" [LKof_hls_opt.cpp:282]   --->   Operation 129 'sub' 'ret_V_2' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%ret_V_2_cast = sext i16 %ret_V_2 to i19" [LKof_hls_opt.cpp:282]   --->   Operation 130 'sext' 'ret_V_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_15 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_10_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 131 'partselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%p_shl11 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_15, i3 0)" [LKof_hls_opt.cpp:283]   --->   Operation 132 'bitconcatenate' 'p_shl11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%p_shl11_cast = zext i15 %p_shl11 to i16" [LKof_hls_opt.cpp:283]   --->   Operation 133 'zext' 'p_shl11_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%p_shl12 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_15, i1 false)" [LKof_hls_opt.cpp:283]   --->   Operation 134 'bitconcatenate' 'p_shl12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%p_shl12_cast = zext i13 %p_shl12 to i16" [LKof_hls_opt.cpp:283]   --->   Operation 135 'zext' 'p_shl12_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.84ns)   --->   "%ret_V_4_2 = sub i16 %p_shl11_cast, %p_shl12_cast" [LKof_hls_opt.cpp:283]   --->   Operation 136 'sub' 'ret_V_4_2' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%ret_V_4_2_cast = sext i16 %ret_V_4_2 to i19" [LKof_hls_opt.cpp:283]   --->   Operation 137 'sext' 'ret_V_4_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%tmp_71_2_cast_cast = zext i19 %ret_V_2_cast to i20" [LKof_hls_opt.cpp:285]   --->   Operation 138 'zext' 'tmp_71_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%tmp8 = add i20 %accum1_1_1_1, %tmp_71_1_2_cast" [LKof_hls_opt.cpp:286]   --->   Operation 139 'add' 'tmp8' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 140 [1/1] (0.85ns)   --->   "%tmp10 = add i17 %tmp_71_1_3_cast_cast, %tmp_71_1_4_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 140 'add' 'tmp10' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%tmp10_cast = zext i17 %tmp10 to i20" [LKof_hls_opt.cpp:285]   --->   Operation 141 'zext' 'tmp10_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.88ns)   --->   "%tmp9 = add i20 %tmp10_cast, %tmp_71_2_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 142 'add' 'tmp9' <Predicate = true> <Delay = 0.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 143 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%accum1_1_2 = add i20 %tmp9, %tmp8" [LKof_hls_opt.cpp:286]   --->   Operation 143 'add' 'accum1_1_2' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_72_2_cast_cast = zext i19 %ret_V_4_2_cast to i20" [LKof_hls_opt.cpp:286]   --->   Operation 144 'zext' 'tmp_72_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%tmp11 = add i20 %accum2_1_1_1, %tmp_72_1_2_cast" [LKof_hls_opt.cpp:279]   --->   Operation 145 'add' 'tmp11' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 146 [1/1] (0.85ns)   --->   "%tmp13 = add i17 %tmp_72_1_3_cast_cast, %tmp_72_1_4_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 146 'add' 'tmp13' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%tmp13_cast = zext i17 %tmp13 to i20" [LKof_hls_opt.cpp:286]   --->   Operation 147 'zext' 'tmp13_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.88ns)   --->   "%tmp12 = add i20 %tmp13_cast, %tmp_72_2_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 148 'add' 'tmp12' <Predicate = true> <Delay = 0.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 149 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%accum2_1_2 = add i20 %tmp12, %tmp11" [LKof_hls_opt.cpp:279]   --->   Operation 149 'add' 'accum2_1_2' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_20 = trunc i24 %window_11_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 150 'trunc' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%p_shl13 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_20, i5 0)" [LKof_hls_opt.cpp:282]   --->   Operation 151 'bitconcatenate' 'p_shl13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%p_shl13_cast = zext i17 %p_shl13 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 152 'zext' 'p_shl13_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%p_shl14 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_20, i3 0)" [LKof_hls_opt.cpp:282]   --->   Operation 153 'bitconcatenate' 'p_shl14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%p_shl14_cast = zext i15 %p_shl14 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 154 'zext' 'p_shl14_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.86ns)   --->   "%ret_V_2_1 = sub i18 %p_shl13_cast, %p_shl14_cast" [LKof_hls_opt.cpp:282]   --->   Operation 155 'sub' 'ret_V_2_1' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%ret_V_2_1_cast = sext i18 %ret_V_2_1 to i19" [LKof_hls_opt.cpp:282]   --->   Operation 156 'sext' 'ret_V_2_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%tmp_21 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_11_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 157 'partselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%p_shl34 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_21, i5 0)" [LKof_hls_opt.cpp:283]   --->   Operation 158 'bitconcatenate' 'p_shl34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%p_shl34_cast = zext i17 %p_shl34 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 159 'zext' 'p_shl34_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%p_shl35 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_21, i3 0)" [LKof_hls_opt.cpp:283]   --->   Operation 160 'bitconcatenate' 'p_shl35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%p_shl35_cast = zext i15 %p_shl35 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 161 'zext' 'p_shl35_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.86ns)   --->   "%ret_V_4_2_1 = sub i18 %p_shl34_cast, %p_shl35_cast" [LKof_hls_opt.cpp:283]   --->   Operation 162 'sub' 'ret_V_4_2_1' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%ret_V_4_2_1_cast = sext i18 %ret_V_4_2_1 to i19" [LKof_hls_opt.cpp:283]   --->   Operation 163 'sext' 'ret_V_4_2_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%tmp_71_2_1_cast = zext i19 %ret_V_2_1_cast to i20" [LKof_hls_opt.cpp:286]   --->   Operation 164 'zext' 'tmp_71_2_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%tmp_72_2_1_cast = zext i19 %ret_V_4_2_1_cast to i20" [LKof_hls_opt.cpp:279]   --->   Operation 165 'zext' 'tmp_72_2_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_22 = trunc i24 %window_12_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 166 'trunc' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%p_shl32 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_22, i5 0)" [LKof_hls_opt.cpp:282]   --->   Operation 167 'bitconcatenate' 'p_shl32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%p_shl32_cast = zext i17 %p_shl32 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 168 'zext' 'p_shl32_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%p_shl33 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_22, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 169 'bitconcatenate' 'p_shl33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%p_shl33_cast = zext i14 %p_shl33 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 170 'zext' 'p_shl33_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.86ns)   --->   "%ret_V_2_2 = add i18 %p_shl32_cast, %p_shl33_cast" [LKof_hls_opt.cpp:282]   --->   Operation 171 'add' 'ret_V_2_2' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_23 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_12_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 172 'partselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%p_shl30 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_23, i5 0)" [LKof_hls_opt.cpp:283]   --->   Operation 173 'bitconcatenate' 'p_shl30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%p_shl30_cast = zext i17 %p_shl30 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 174 'zext' 'p_shl30_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%p_shl31 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_23, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 175 'bitconcatenate' 'p_shl31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%p_shl31_cast = zext i14 %p_shl31 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 176 'zext' 'p_shl31_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.86ns)   --->   "%ret_V_4_2_2 = add i18 %p_shl30_cast, %p_shl31_cast" [LKof_hls_opt.cpp:283]   --->   Operation 177 'add' 'ret_V_4_2_2' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_71_2_2_cast_cast = zext i18 %ret_V_2_2 to i19" [LKof_hls_opt.cpp:286]   --->   Operation 178 'zext' 'tmp_71_2_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%tmp_72_2_2_cast_cast = zext i18 %ret_V_4_2_2 to i19" [LKof_hls_opt.cpp:279]   --->   Operation 179 'zext' 'tmp_72_2_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%tmp_24 = trunc i24 %window_13_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 180 'trunc' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%p_shl28 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_24, i5 0)" [LKof_hls_opt.cpp:282]   --->   Operation 181 'bitconcatenate' 'p_shl28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%p_shl28_cast = zext i17 %p_shl28 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 182 'zext' 'p_shl28_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%p_shl29 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_24, i3 0)" [LKof_hls_opt.cpp:282]   --->   Operation 183 'bitconcatenate' 'p_shl29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%p_shl29_cast = zext i15 %p_shl29 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 184 'zext' 'p_shl29_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.86ns)   --->   "%ret_V_2_3 = sub i18 %p_shl28_cast, %p_shl29_cast" [LKof_hls_opt.cpp:282]   --->   Operation 185 'sub' 'ret_V_2_3' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%ret_V_2_3_cast = sext i18 %ret_V_2_3 to i19" [LKof_hls_opt.cpp:282]   --->   Operation 186 'sext' 'ret_V_2_3_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%tmp_25 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_13_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 187 'partselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%p_shl26 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_25, i5 0)" [LKof_hls_opt.cpp:283]   --->   Operation 188 'bitconcatenate' 'p_shl26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%p_shl26_cast = zext i17 %p_shl26 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 189 'zext' 'p_shl26_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%p_shl27 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_25, i3 0)" [LKof_hls_opt.cpp:283]   --->   Operation 190 'bitconcatenate' 'p_shl27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%p_shl27_cast = zext i15 %p_shl27 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 191 'zext' 'p_shl27_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.86ns)   --->   "%ret_V_4_2_3 = sub i18 %p_shl26_cast, %p_shl27_cast" [LKof_hls_opt.cpp:283]   --->   Operation 192 'sub' 'ret_V_4_2_3' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%ret_V_4_2_3_cast = sext i18 %ret_V_4_2_3 to i19" [LKof_hls_opt.cpp:283]   --->   Operation 193 'sext' 'ret_V_4_2_3_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%tmp_71_2_3_cast_cast = zext i19 %ret_V_2_3_cast to i20" [LKof_hls_opt.cpp:286]   --->   Operation 194 'zext' 'tmp_71_2_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%tmp_72_2_3_cast_cast = zext i19 %ret_V_4_2_3_cast to i20" [LKof_hls_opt.cpp:279]   --->   Operation 195 'zext' 'tmp_72_2_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%tmp_26 = trunc i24 %window_14_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 196 'trunc' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%p_shl24 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_26, i3 0)" [LKof_hls_opt.cpp:282]   --->   Operation 197 'bitconcatenate' 'p_shl24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%p_shl24_cast = zext i15 %p_shl24 to i16" [LKof_hls_opt.cpp:282]   --->   Operation 198 'zext' 'p_shl24_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%p_shl25 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_26, i1 false)" [LKof_hls_opt.cpp:282]   --->   Operation 199 'bitconcatenate' 'p_shl25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%p_shl25_cast = zext i13 %p_shl25 to i16" [LKof_hls_opt.cpp:282]   --->   Operation 200 'zext' 'p_shl25_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.84ns)   --->   "%ret_V_2_4 = sub i16 %p_shl24_cast, %p_shl25_cast" [LKof_hls_opt.cpp:282]   --->   Operation 201 'sub' 'ret_V_2_4' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%ret_V_2_4_cast = sext i16 %ret_V_2_4 to i19" [LKof_hls_opt.cpp:282]   --->   Operation 202 'sext' 'ret_V_2_4_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%tmp_27 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_14_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 203 'partselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%p_shl22 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_27, i3 0)" [LKof_hls_opt.cpp:283]   --->   Operation 204 'bitconcatenate' 'p_shl22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%p_shl22_cast = zext i15 %p_shl22 to i16" [LKof_hls_opt.cpp:283]   --->   Operation 205 'zext' 'p_shl22_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%p_shl23 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_27, i1 false)" [LKof_hls_opt.cpp:283]   --->   Operation 206 'bitconcatenate' 'p_shl23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%p_shl23_cast = zext i13 %p_shl23 to i16" [LKof_hls_opt.cpp:283]   --->   Operation 207 'zext' 'p_shl23_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 208 [1/1] (0.84ns)   --->   "%ret_V_4_2_4 = sub i16 %p_shl22_cast, %p_shl23_cast" [LKof_hls_opt.cpp:283]   --->   Operation 208 'sub' 'ret_V_4_2_4' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%ret_V_4_2_4_cast = sext i16 %ret_V_4_2_4 to i19" [LKof_hls_opt.cpp:283]   --->   Operation 209 'sext' 'ret_V_4_2_4_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "%tmp_71_2_4_cast_cast = zext i19 %ret_V_2_4_cast to i20" [LKof_hls_opt.cpp:286]   --->   Operation 210 'zext' 'tmp_71_2_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%tmp_72_2_4_cast_cast = zext i19 %ret_V_4_2_4_cast to i20" [LKof_hls_opt.cpp:279]   --->   Operation 211 'zext' 'tmp_72_2_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%tmp_28 = trunc i24 %window_15_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 212 'trunc' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%ret_V_3 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_28, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 213 'bitconcatenate' 'ret_V_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_29 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_15_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 214 'partselect' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%ret_V_4_3 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_29, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 215 'bitconcatenate' 'ret_V_4_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "%tmp_71_3_cast_cast = zext i14 %ret_V_3 to i16" [LKof_hls_opt.cpp:286]   --->   Operation 216 'zext' 'tmp_71_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%tmp_72_3_cast_cast = zext i14 %ret_V_4_3 to i16" [LKof_hls_opt.cpp:279]   --->   Operation 217 'zext' 'tmp_72_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "%tmp_30 = trunc i24 %window_16_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 218 'trunc' 'tmp_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%ret_V_3_1 = call i16 @_ssdm_op_BitConcatenate.i16.i12.i4(i12 %tmp_30, i4 0)" [LKof_hls_opt.cpp:282]   --->   Operation 219 'bitconcatenate' 'ret_V_3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%tmp_31 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_16_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 220 'partselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%ret_V_4_3_1 = call i16 @_ssdm_op_BitConcatenate.i16.i12.i4(i12 %tmp_31, i4 0)" [LKof_hls_opt.cpp:283]   --->   Operation 221 'bitconcatenate' 'ret_V_4_3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "%tmp_71_3_1_cast_cast = zext i16 %ret_V_3_1 to i17" [LKof_hls_opt.cpp:286]   --->   Operation 222 'zext' 'tmp_71_3_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%tmp_72_3_1_cast_cast = zext i16 %ret_V_4_3_1 to i17" [LKof_hls_opt.cpp:279]   --->   Operation 223 'zext' 'tmp_72_3_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%tmp_32 = trunc i24 %window_17_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 224 'trunc' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 225 [1/1] (0.00ns)   --->   "%p_shl20 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_32, i5 0)" [LKof_hls_opt.cpp:282]   --->   Operation 225 'bitconcatenate' 'p_shl20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 226 [1/1] (0.00ns)   --->   "%p_shl20_cast = zext i17 %p_shl20 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 226 'zext' 'p_shl20_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 227 [1/1] (0.00ns)   --->   "%p_shl21 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_32, i3 0)" [LKof_hls_opt.cpp:282]   --->   Operation 227 'bitconcatenate' 'p_shl21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "%p_shl21_cast = zext i15 %p_shl21 to i18" [LKof_hls_opt.cpp:282]   --->   Operation 228 'zext' 'p_shl21_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 229 [1/1] (0.86ns)   --->   "%ret_V_3_2 = sub i18 %p_shl20_cast, %p_shl21_cast" [LKof_hls_opt.cpp:282]   --->   Operation 229 'sub' 'ret_V_3_2' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "%ret_V_3_2_cast = sext i18 %ret_V_3_2 to i19" [LKof_hls_opt.cpp:282]   --->   Operation 230 'sext' 'ret_V_3_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%tmp_33 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_17_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 231 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 232 [1/1] (0.00ns)   --->   "%p_shl18 = call i17 @_ssdm_op_BitConcatenate.i17.i12.i5(i12 %tmp_33, i5 0)" [LKof_hls_opt.cpp:283]   --->   Operation 232 'bitconcatenate' 'p_shl18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%p_shl18_cast = zext i17 %p_shl18 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 233 'zext' 'p_shl18_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 234 [1/1] (0.00ns)   --->   "%p_shl19 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_33, i3 0)" [LKof_hls_opt.cpp:283]   --->   Operation 234 'bitconcatenate' 'p_shl19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%p_shl19_cast = zext i15 %p_shl19 to i18" [LKof_hls_opt.cpp:283]   --->   Operation 235 'zext' 'p_shl19_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 236 [1/1] (0.86ns)   --->   "%ret_V_4_3_2 = sub i18 %p_shl18_cast, %p_shl19_cast" [LKof_hls_opt.cpp:283]   --->   Operation 236 'sub' 'ret_V_4_3_2' <Predicate = true> <Delay = 0.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 237 [1/1] (0.00ns)   --->   "%ret_V_4_3_2_cast = sext i18 %ret_V_4_3_2 to i19" [LKof_hls_opt.cpp:283]   --->   Operation 237 'sext' 'ret_V_4_3_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 238 [1/1] (0.00ns)   --->   "%tmp_71_3_2_cast_cast = zext i19 %ret_V_3_2_cast to i20" [LKof_hls_opt.cpp:286]   --->   Operation 238 'zext' 'tmp_71_3_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_72_3_2_cast_cast = zext i19 %ret_V_4_3_2_cast to i20" [LKof_hls_opt.cpp:279]   --->   Operation 239 'zext' 'tmp_72_3_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 240 [1/1] (0.00ns)   --->   "%tmp_34 = trunc i24 %window_18_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 240 'trunc' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 241 [1/1] (0.00ns)   --->   "%ret_V_3_3 = call i16 @_ssdm_op_BitConcatenate.i16.i12.i4(i12 %tmp_34, i4 0)" [LKof_hls_opt.cpp:282]   --->   Operation 241 'bitconcatenate' 'ret_V_3_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 242 [1/1] (0.00ns)   --->   "%tmp_35 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_18_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 242 'partselect' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 243 [1/1] (0.00ns)   --->   "%ret_V_4_3_3 = call i16 @_ssdm_op_BitConcatenate.i16.i12.i4(i12 %tmp_35, i4 0)" [LKof_hls_opt.cpp:283]   --->   Operation 243 'bitconcatenate' 'ret_V_4_3_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 244 [1/1] (0.00ns)   --->   "%tmp_71_3_3_cast_cast = zext i16 %ret_V_3_3 to i17" [LKof_hls_opt.cpp:286]   --->   Operation 244 'zext' 'tmp_71_3_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 245 [1/1] (0.00ns)   --->   "%tmp_72_3_3_cast_cast = zext i16 %ret_V_4_3_3 to i17" [LKof_hls_opt.cpp:279]   --->   Operation 245 'zext' 'tmp_72_3_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 246 [1/1] (0.00ns)   --->   "%tmp_36 = trunc i24 %window_19_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 246 'trunc' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 247 [1/1] (0.00ns)   --->   "%ret_V_3_4 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_36, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 247 'bitconcatenate' 'ret_V_3_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 248 [1/1] (0.00ns)   --->   "%tmp_37 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_19_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 248 'partselect' 'tmp_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 249 [1/1] (0.00ns)   --->   "%ret_V_4_3_4 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_37, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 249 'bitconcatenate' 'ret_V_4_3_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 250 [1/1] (0.00ns)   --->   "%tmp_71_3_4_cast_cast = zext i14 %ret_V_3_4 to i15" [LKof_hls_opt.cpp:286]   --->   Operation 250 'zext' 'tmp_71_3_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 251 [1/1] (0.00ns)   --->   "%tmp_72_3_4_cast_cast = zext i14 %ret_V_4_3_4 to i15" [LKof_hls_opt.cpp:279]   --->   Operation 251 'zext' 'tmp_72_3_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 252 [1/1] (0.00ns)   --->   "%tmp_38 = trunc i24 %window_20_V_read_1 to i12" [LKof_hls_opt.cpp:279]   --->   Operation 252 'trunc' 'tmp_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 253 [1/1] (0.00ns)   --->   "%p_Result_8_4 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_20_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:280]   --->   Operation 253 'partselect' 'p_Result_8_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 254 [1/1] (0.00ns)   --->   "%tmp_71_4_cast_cast = zext i12 %tmp_38 to i15" [LKof_hls_opt.cpp:285]   --->   Operation 254 'zext' 'tmp_71_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 255 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%tmp15 = add i20 %accum1_1_2, %tmp_71_2_1_cast" [LKof_hls_opt.cpp:286]   --->   Operation 255 'add' 'tmp15' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 256 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp17 = add i20 %tmp_71_2_4_cast_cast, %tmp_71_3_2_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 256 'add' 'tmp17' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 257 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%tmp16 = add i20 %tmp17, %tmp_71_2_3_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 257 'add' 'tmp16' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 258 [1/1] (0.85ns)   --->   "%tmp20 = add i17 %tmp_71_3_1_cast_cast, %tmp_71_3_3_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 258 'add' 'tmp20' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 259 [1/1] (0.00ns)   --->   "%tmp20_cast = zext i17 %tmp20 to i19" [LKof_hls_opt.cpp:285]   --->   Operation 259 'zext' 'tmp20_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 260 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp19 = add i19 %tmp20_cast, %tmp_71_2_2_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 260 'add' 'tmp19' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 261 [1/1] (0.83ns)   --->   "%tmp22 = add i15 %tmp_71_3_4_cast_cast, %tmp_71_4_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 261 'add' 'tmp22' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 262 [1/1] (0.00ns)   --->   "%tmp22_cast = zext i15 %tmp22 to i16" [LKof_hls_opt.cpp:285]   --->   Operation 262 'zext' 'tmp22_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 263 [1/1] (0.84ns)   --->   "%tmp21 = add i16 %tmp22_cast, %tmp_71_3_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 263 'add' 'tmp21' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 264 [1/1] (0.00ns)   --->   "%tmp21_cast = zext i16 %tmp21 to i19" [LKof_hls_opt.cpp:285]   --->   Operation 264 'zext' 'tmp21_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 265 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%tmp18 = add i19 %tmp21_cast, %tmp19" [LKof_hls_opt.cpp:285]   --->   Operation 265 'add' 'tmp18' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 266 [1/1] (0.00ns)   --->   "%tmp_72_4_cast_cast = zext i12 %p_Result_8_4 to i15" [LKof_hls_opt.cpp:286]   --->   Operation 266 'zext' 'tmp_72_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 267 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%tmp24 = add i20 %accum2_1_2, %tmp_72_2_1_cast" [LKof_hls_opt.cpp:279]   --->   Operation 267 'add' 'tmp24' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 268 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp26 = add i20 %tmp_72_2_4_cast_cast, %tmp_72_3_2_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 268 'add' 'tmp26' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 269 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%tmp25 = add i20 %tmp26, %tmp_72_2_3_cast_cast" [LKof_hls_opt.cpp:279]   --->   Operation 269 'add' 'tmp25' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 270 [1/1] (0.85ns)   --->   "%tmp29 = add i17 %tmp_72_3_1_cast_cast, %tmp_72_3_3_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 270 'add' 'tmp29' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 271 [1/1] (0.00ns)   --->   "%tmp29_cast = zext i17 %tmp29 to i19" [LKof_hls_opt.cpp:286]   --->   Operation 271 'zext' 'tmp29_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 272 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp28 = add i19 %tmp29_cast, %tmp_72_2_2_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 272 'add' 'tmp28' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 273 [1/1] (0.83ns)   --->   "%tmp31 = add i15 %tmp_72_3_4_cast_cast, %tmp_72_4_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 273 'add' 'tmp31' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 274 [1/1] (0.00ns)   --->   "%tmp31_cast = zext i15 %tmp31 to i16" [LKof_hls_opt.cpp:286]   --->   Operation 274 'zext' 'tmp31_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 275 [1/1] (0.84ns)   --->   "%tmp30 = add i16 %tmp31_cast, %tmp_72_3_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 275 'add' 'tmp30' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 276 [1/1] (0.00ns)   --->   "%tmp30_cast = zext i16 %tmp30 to i19" [LKof_hls_opt.cpp:286]   --->   Operation 276 'zext' 'tmp30_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 277 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%tmp27 = add i19 %tmp30_cast, %tmp28" [LKof_hls_opt.cpp:286]   --->   Operation 277 'add' 'tmp27' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 278 [1/1] (0.00ns)   --->   "%tmp_39 = trunc i24 %window_21_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 278 'trunc' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 279 [1/1] (0.00ns)   --->   "%ret_V_414_1 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_39, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 279 'bitconcatenate' 'ret_V_414_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_40 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_21_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 280 'partselect' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 281 [1/1] (0.00ns)   --->   "%ret_V_4_4_1 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_40, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 281 'bitconcatenate' 'ret_V_4_4_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 282 [1/1] (0.00ns)   --->   "%tmp_71_4_1_cast_cast = zext i14 %ret_V_414_1 to i16" [LKof_hls_opt.cpp:286]   --->   Operation 282 'zext' 'tmp_71_4_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 283 [1/1] (0.00ns)   --->   "%tmp_72_4_1_cast_cast = zext i14 %ret_V_4_4_1 to i16" [LKof_hls_opt.cpp:279]   --->   Operation 283 'zext' 'tmp_72_4_1_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 284 [1/1] (0.00ns)   --->   "%tmp_41 = trunc i24 %window_22_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 284 'trunc' 'tmp_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 285 [1/1] (0.00ns)   --->   "%tmp_42 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_22_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 285 'partselect' 'tmp_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 286 [1/1] (0.00ns)   --->   "%tmp_43 = trunc i24 %window_23_V_read_1 to i12" [LKof_hls_opt.cpp:260]   --->   Operation 286 'trunc' 'tmp_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 287 [1/1] (0.00ns)   --->   "%ret_V_414_3 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_43, i2 0)" [LKof_hls_opt.cpp:282]   --->   Operation 287 'bitconcatenate' 'ret_V_414_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 288 [1/1] (0.00ns)   --->   "%tmp_44 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_23_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:260]   --->   Operation 288 'partselect' 'tmp_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 289 [1/1] (0.00ns)   --->   "%ret_V_4_4_3 = call i14 @_ssdm_op_BitConcatenate.i14.i12.i2(i12 %tmp_44, i2 0)" [LKof_hls_opt.cpp:283]   --->   Operation 289 'bitconcatenate' 'ret_V_4_4_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 290 [1/1] (0.00ns)   --->   "%tmp_71_4_3_cast_cast = zext i14 %ret_V_414_3 to i15" [LKof_hls_opt.cpp:286]   --->   Operation 290 'zext' 'tmp_71_4_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 291 [1/1] (0.00ns)   --->   "%tmp_72_4_3_cast_cast = zext i14 %ret_V_4_4_3 to i15" [LKof_hls_opt.cpp:279]   --->   Operation 291 'zext' 'tmp_72_4_3_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 292 [1/1] (0.00ns)   --->   "%tmp_45 = trunc i24 %window_24_V_read_1 to i12" [LKof_hls_opt.cpp:279]   --->   Operation 292 'trunc' 'tmp_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 293 [1/1] (0.00ns)   --->   "%p_Result_8_4_4 = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %window_24_V_read_1, i32 12, i32 23)" [LKof_hls_opt.cpp:280]   --->   Operation 293 'partselect' 'p_Result_8_4_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 294 [1/1] (0.00ns)   --->   "%tmp_71_4_4_cast_cast = zext i12 %tmp_45 to i15" [LKof_hls_opt.cpp:285]   --->   Operation 294 'zext' 'tmp_71_4_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 295 [1/1] (0.83ns)   --->   "%tmp34 = add i15 %tmp_71_4_3_cast_cast, %tmp_71_4_4_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 295 'add' 'tmp34' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 296 [1/1] (0.00ns)   --->   "%tmp34_cast = zext i15 %tmp34 to i16" [LKof_hls_opt.cpp:285]   --->   Operation 296 'zext' 'tmp34_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 297 [1/1] (0.84ns)   --->   "%tmp33 = add i16 %tmp34_cast, %tmp_71_4_1_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 297 'add' 'tmp33' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 298 [1/1] (0.00ns)   --->   "%tmp_72_4_4_cast_cast = zext i12 %p_Result_8_4_4 to i15" [LKof_hls_opt.cpp:286]   --->   Operation 298 'zext' 'tmp_72_4_4_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 299 [1/1] (0.83ns)   --->   "%tmp37 = add i15 %tmp_72_4_3_cast_cast, %tmp_72_4_4_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 299 'add' 'tmp37' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 300 [1/1] (0.00ns)   --->   "%tmp37_cast = zext i15 %tmp37 to i16" [LKof_hls_opt.cpp:286]   --->   Operation 300 'zext' 'tmp37_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 301 [1/1] (0.84ns)   --->   "%tmp36 = add i16 %tmp37_cast, %tmp_72_4_1_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 301 'add' 'tmp36' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 1.54>
+ST_2 : Operation 302 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp14 = add i20 %tmp16, %tmp15" [LKof_hls_opt.cpp:286]   --->   Operation 302 'add' 'tmp14' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 303 [1/1] (0.00ns)   --->   "%tmp18_cast = zext i19 %tmp18 to i20" [LKof_hls_opt.cpp:286]   --->   Operation 303 'zext' 'tmp18_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 304 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%accum1_1_4 = add i20 %tmp18_cast, %tmp14" [LKof_hls_opt.cpp:286]   --->   Operation 304 'add' 'accum1_1_4' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 305 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp23 = add i20 %tmp25, %tmp24" [LKof_hls_opt.cpp:279]   --->   Operation 305 'add' 'tmp23' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 306 [1/1] (0.00ns)   --->   "%tmp27_cast = zext i19 %tmp27 to i20" [LKof_hls_opt.cpp:279]   --->   Operation 306 'zext' 'tmp27_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 307 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%accum2_1_4 = add i20 %tmp27_cast, %tmp23" [LKof_hls_opt.cpp:279]   --->   Operation 307 'add' 'accum2_1_4' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 308 [1/1] (0.00ns)   --->   "%p_shl16 = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_41, i3 0)" [LKof_hls_opt.cpp:282]   --->   Operation 308 'bitconcatenate' 'p_shl16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 309 [1/1] (0.00ns)   --->   "%p_shl16_cast = zext i15 %p_shl16 to i16" [LKof_hls_opt.cpp:282]   --->   Operation 309 'zext' 'p_shl16_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 310 [1/1] (0.00ns)   --->   "%p_shl17 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_41, i1 false)" [LKof_hls_opt.cpp:282]   --->   Operation 310 'bitconcatenate' 'p_shl17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 311 [1/1] (0.00ns)   --->   "%p_shl17_cast = zext i13 %p_shl17 to i16" [LKof_hls_opt.cpp:282]   --->   Operation 311 'zext' 'p_shl17_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 312 [1/1] (0.84ns)   --->   "%ret_V_414_2 = sub i16 %p_shl16_cast, %p_shl17_cast" [LKof_hls_opt.cpp:282]   --->   Operation 312 'sub' 'ret_V_414_2' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 313 [1/1] (0.00ns)   --->   "%ret_V_414_2_cast = sext i16 %ret_V_414_2 to i19" [LKof_hls_opt.cpp:282]   --->   Operation 313 'sext' 'ret_V_414_2_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 314 [1/1] (0.00ns)   --->   "%p_shl = call i15 @_ssdm_op_BitConcatenate.i15.i12.i3(i12 %tmp_42, i3 0)" [LKof_hls_opt.cpp:283]   --->   Operation 314 'bitconcatenate' 'p_shl' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 315 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i15 %p_shl to i16" [LKof_hls_opt.cpp:283]   --->   Operation 315 'zext' 'p_shl_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 316 [1/1] (0.00ns)   --->   "%p_shl15 = call i13 @_ssdm_op_BitConcatenate.i13.i12.i1(i12 %tmp_42, i1 false)" [LKof_hls_opt.cpp:283]   --->   Operation 316 'bitconcatenate' 'p_shl15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 317 [1/1] (0.00ns)   --->   "%p_shl15_cast = zext i13 %p_shl15 to i16" [LKof_hls_opt.cpp:283]   --->   Operation 317 'zext' 'p_shl15_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 318 [1/1] (0.84ns)   --->   "%ret_V_4_4_2 = sub i16 %p_shl_cast, %p_shl15_cast" [LKof_hls_opt.cpp:283]   --->   Operation 318 'sub' 'ret_V_4_4_2' <Predicate = true> <Delay = 0.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 319 [1/1] (0.00ns)   --->   "%ret_V_4_4_2_cast = sext i16 %ret_V_4_4_2 to i19" [LKof_hls_opt.cpp:283]   --->   Operation 319 'sext' 'ret_V_4_4_2_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 320 [1/1] (0.00ns)   --->   "%tmp_71_4_2_cast_cast = zext i19 %ret_V_414_2_cast to i20" [LKof_hls_opt.cpp:286]   --->   Operation 320 'zext' 'tmp_71_4_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 321 [1/1] (0.00ns)   --->   "%tmp_72_4_2_cast_cast = zext i19 %ret_V_4_4_2_cast to i20" [LKof_hls_opt.cpp:279]   --->   Operation 321 'zext' 'tmp_72_4_2_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 322 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp32 = add i20 %accum1_1_4, %tmp_71_4_2_cast_cast" [LKof_hls_opt.cpp:285]   --->   Operation 322 'add' 'tmp32' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 323 [1/1] (0.00ns)   --->   "%tmp33_cast = zext i16 %tmp33 to i20" [LKof_hls_opt.cpp:285]   --->   Operation 323 'zext' 'tmp33_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 324 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%accum1_1_4_4 = add i20 %tmp33_cast, %tmp32" [LKof_hls_opt.cpp:285]   --->   Operation 324 'add' 'accum1_1_4_4' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 325 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp35 = add i20 %accum2_1_4, %tmp_72_4_2_cast_cast" [LKof_hls_opt.cpp:286]   --->   Operation 325 'add' 'tmp35' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 326 [1/1] (0.00ns)   --->   "%tmp36_cast = zext i16 %tmp36 to i20" [LKof_hls_opt.cpp:286]   --->   Operation 326 'zext' 'tmp36_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 327 [1/1] (0.69ns) (root node of TernaryAdder)   --->   "%accum2_1_4_4 = add i20 %tmp36_cast, %tmp35" [LKof_hls_opt.cpp:286]   --->   Operation 327 'add' 'accum2_1_4_4' <Predicate = true> <Delay = 0.69> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 328 [1/1] (0.00ns)   --->   "%final_val1_V = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %accum1_1_4_4, i32 8, i32 19)" [LKof_hls_opt.cpp:292]   --->   Operation 328 'partselect' 'final_val1_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 329 [1/1] (0.00ns)   --->   "%final_val2_V = call i12 @_ssdm_op_PartSelect.i12.i20.i32.i32(i20 %accum2_1_4_4, i32 8, i32 19)" [LKof_hls_opt.cpp:293]   --->   Operation 329 'partselect' 'final_val2_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 330 [1/1] (0.00ns)   --->   "%p_Result_s = call i24 @_ssdm_op_BitConcatenate.i24.i12.i12(i12 %final_val2_V, i12 %final_val1_V)" [LKof_hls_opt.cpp:298]   --->   Operation 330 'bitconcatenate' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 331 [1/1] (0.00ns)   --->   "ret i24 %p_Result_s" [LKof_hls_opt.cpp:300]   --->   Operation 331 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 3.96ns
+The critical path consists of the following:
+	wire read on port 'window_1_V_read' (LKof_hls_opt.cpp:260) [49]  (0 ns)
+	'add' operation ('accum1_1_0_1', LKof_hls_opt.cpp:285) [60]  (0.831 ns)
+	'add' operation ('tmp1', LKof_hls_opt.cpp:285) [102]  (0.853 ns)
+	'add' operation ('tmp', LKof_hls_opt.cpp:285) [104]  (0.884 ns)
+	'add' operation ('accum1_1_1_1', LKof_hls_opt.cpp:285) [109]  (0 ns)
+	'add' operation ('tmp8', LKof_hls_opt.cpp:286) [162]  (0.698 ns)
+	'add' operation ('accum1_1_2', LKof_hls_opt.cpp:286) [166]  (0 ns)
+	'add' operation ('tmp15', LKof_hls_opt.cpp:286) [278]  (0.698 ns)
+
+ <State 2>: 1.54ns
+The critical path consists of the following:
+	'sub' operation ('ret_V_414_2', LKof_hls_opt.cpp:282) [318]  (0.842 ns)
+	'add' operation ('tmp32', LKof_hls_opt.cpp:285) [338]  (0 ns)
+	'add' operation ('accum1_1_4_4', LKof_hls_opt.cpp:285) [343]  (0.698 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

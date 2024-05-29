@@ -1,0 +1,339 @@
+
+
+================================================================
+== Vivado HLS Report for 'hls_twoIsotropicFilt'
+================================================================
+* Date:           Mon Mar  1 13:00:52 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        HLS_LK
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.034|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+--------+-------+--------+---------+
+    |     Latency    |    Interval    | Pipeline|
+    |  min  |   max  |  min  |   max  |   Type  |
+    +-------+--------+-------+--------+---------+
+    |  12548|  230404|  12548|  230404|   none  |
+    +-------+--------+-------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+--------+----------+-----------+-----------+----------------+----------+
+        |          |     Latency    | Iteration|  Initiation Interval  |      Trip      |          |
+        | Loop Name|  min  |   max  |  Latency |  achieved |   target  |      Count     | Pipelined|
+        +----------+-------+--------+----------+-----------+-----------+----------------+----------+
+        |- L1_L2   |  12546|  230402|         4|          1|          1| 12544 ~ 230400 |    yes   |
+        +----------+-------+--------+----------+-----------+-----------+----------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	6  / (exitcond_flatten)
+	4  / (!exitcond_flatten)
+4 --> 
+	5  / true
+5 --> 
+	2  / true
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.38>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%window_0_V = alloca i24"   --->   Operation 7 'alloca' 'window_0_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%window_1_V = alloca i24"   --->   Operation 8 'alloca' 'window_1_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%window_2_V = alloca i24"   --->   Operation 9 'alloca' 'window_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%window_22_V = alloca i24"   --->   Operation 10 'alloca' 'window_22_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%window_5_V = alloca i24"   --->   Operation 11 'alloca' 'window_5_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%window_6_V = alloca i24"   --->   Operation 12 'alloca' 'window_6_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%window_7_V = alloca i24"   --->   Operation 13 'alloca' 'window_7_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%window_21_V = alloca i24"   --->   Operation 14 'alloca' 'window_21_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%window_10_V = alloca i24"   --->   Operation 15 'alloca' 'window_10_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%window_11_V = alloca i24"   --->   Operation 16 'alloca' 'window_11_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%window_12_V = alloca i24"   --->   Operation 17 'alloca' 'window_12_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%window_20_V = alloca i24"   --->   Operation 18 'alloca' 'window_20_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%window_15_V = alloca i24"   --->   Operation 19 'alloca' 'window_15_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%window_16_V = alloca i24"   --->   Operation 20 'alloca' 'window_16_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%window_17_V = alloca i24"   --->   Operation 21 'alloca' 'window_17_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%window_23_V = alloca i24"   --->   Operation 22 'alloca' 'window_23_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%window_3_V = alloca i24"   --->   Operation 23 'alloca' 'window_3_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%window_8_V = alloca i24"   --->   Operation 24 'alloca' 'window_8_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%window_13_V = alloca i24"   --->   Operation 25 'alloca' 'window_13_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%window_18_V = alloca i24"   --->   Operation 26 'alloca' 'window_18_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %out2_img_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str293, i32 0, i32 0, [1 x i8]* @p_str294, [1 x i8]* @p_str295, [1 x i8]* @p_str296, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str297, [1 x i8]* @p_str298)"   --->   Operation 27 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %out1_img_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str287, i32 0, i32 0, [1 x i8]* @p_str288, [1 x i8]* @p_str289, [1 x i8]* @p_str290, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str291, [1 x i8]* @p_str292)"   --->   Operation 28 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%width_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %width)"   --->   Operation 29 'read' 'width_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%height_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %height)"   --->   Operation 30 'read' 'height_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %inp1_img_V_data_V, i1* %inp1_img_V_last_V, [5 x i8]* @p_str9, i32 1, i32 1, [5 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind"   --->   Operation 31 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %inp1_img_V_data_V, i1* %inp1_img_V_last_V, [5 x i8]* @p_str9, i32 1, i32 1, [5 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind"   --->   Operation 32 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %inp2_img_V_data_V, i1* %inp2_img_V_last_V, [5 x i8]* @p_str9, i32 1, i32 1, [5 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind"   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %inp2_img_V_data_V, i1* %inp2_img_V_last_V, [5 x i8]* @p_str9, i32 1, i32 1, [5 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind"   --->   Operation 34 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %height_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str111, i32 0, i32 0, [1 x i8]* @p_str112, [1 x i8]* @p_str113, [1 x i8]* @p_str114, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str115, [11 x i8]* @ScalarProp_str)"   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (1.83ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i16P(i16* %height_out, i16 %height_read)"   --->   Operation 36 'write' <Predicate = true> <Delay = 1.83> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 0> <FIFO>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %width_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str117, [1 x i8]* @p_str118, [1 x i8]* @p_str119, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str120, [11 x i8]* @ScalarProp_str)"   --->   Operation 37 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (1.83ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i16P(i16* %width_out, i16 %width_read)"   --->   Operation 38 'write' <Predicate = true> <Delay = 1.83> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 0> <FIFO>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %inp2_img_V_data_V, i1* %inp2_img_V_last_V, [5 x i8]* @p_str9, i32 1, i32 1, [5 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind"   --->   Operation 39 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %inp1_img_V_data_V, i1* %inp1_img_V_last_V, [5 x i8]* @p_str9, i32 1, i32 1, [5 x i8]* @p_str10, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3) nounwind"   --->   Operation 40 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_2_cast_i = zext i16 %height_read to i17" [LKof_hls_opt.cpp:331]   --->   Operation 41 'zext' 'tmp_2_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns) (grouped into DSP with root node bound)   --->   "%tmp_3_i = add i17 %tmp_2_cast_i, 2" [LKof_hls_opt.cpp:331]   --->   Operation 42 'add' 'tmp_3_i' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_4_cast_i = zext i16 %width_read to i17" [LKof_hls_opt.cpp:334]   --->   Operation 43 'zext' 'tmp_4_cast_i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.85ns)   --->   "%tmp_5_i = add i17 %tmp_4_cast_i, 2" [LKof_hls_opt.cpp:334]   --->   Operation 44 'add' 'tmp_5_i' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns) (grouped into DSP with root node bound)   --->   "%cast = zext i17 %tmp_3_i to i34" [LKof_hls_opt.cpp:331]   --->   Operation 45 'zext' 'cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%cast1 = zext i17 %tmp_5_i to i34" [LKof_hls_opt.cpp:334]   --->   Operation 46 'zext' 'cast1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (2.53ns) (root node of the DSP)   --->   "%bound = mul i34 %cast1, %cast" [LKof_hls_opt.cpp:334]   --->   Operation 47 'mul' 'bound' <Predicate = true> <Delay = 2.53> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 48 [1/1] (0.65ns)   --->   "br label %0" [LKof_hls_opt.cpp:331]   --->   Operation 48 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 3.78>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i33 [ 0, %entry ], [ %indvar_flatten_next, %._crit_edge202.i ]"   --->   Operation 49 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%row_i = phi i16 [ 0, %entry ], [ %row_i_mid2, %._crit_edge202.i ]" [LKof_hls_opt.cpp:334]   --->   Operation 50 'phi' 'row_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%col_i = phi i16 [ 0, %entry ], [ %col, %._crit_edge202.i ]"   --->   Operation 51 'phi' 'col_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%indvar_flatten_cast = zext i33 %indvar_flatten to i34" [LKof_hls_opt.cpp:334]   --->   Operation 52 'zext' 'indvar_flatten_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_1_cast_i = zext i16 %col_i to i17" [LKof_hls_opt.cpp:334]   --->   Operation 53 'zext' 'tmp_1_cast_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (1.09ns)   --->   "%tmp_10_i = icmp ult i17 %tmp_1_cast_i, %tmp_5_i" [LKof_hls_opt.cpp:334]   --->   Operation 54 'icmp' 'tmp_10_i' <Predicate = true> <Delay = 1.09> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (1.02ns)   --->   "%exitcond_flatten = icmp eq i34 %indvar_flatten_cast, %bound" [LKof_hls_opt.cpp:334]   --->   Operation 55 'icmp' 'exitcond_flatten' <Predicate = true> <Delay = 1.02> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (1.01ns)   --->   "%indvar_flatten_next = add i33 %indvar_flatten, 1"   --->   Operation 56 'add' 'indvar_flatten_next' <Predicate = true> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.35ns)   --->   "%col_i_mid2 = select i1 %tmp_10_i, i16 %col_i, i16 0" [LKof_hls_opt.cpp:334]   --->   Operation 57 'select' 'col_i_mid2' <Predicate = (!exitcond_flatten)> <Delay = 0.35> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.85ns)   --->   "%row = add i16 %row_i, 1" [LKof_hls_opt.cpp:331]   --->   Operation 58 'add' 'row' <Predicate = (!exitcond_flatten)> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (1.10ns)   --->   "%tmp_8_i_mid1 = icmp ult i16 %row, %height_read" [LKof_hls_opt.cpp:347]   --->   Operation 59 'icmp' 'tmp_8_i_mid1' <Predicate = (!exitcond_flatten)> <Delay = 1.10> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (1.10ns)   --->   "%tmp_8_i = icmp ult i16 %row_i, %height_read" [LKof_hls_opt.cpp:347]   --->   Operation 60 'icmp' 'tmp_8_i' <Predicate = (!exitcond_flatten)> <Delay = 1.10> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.17ns)   --->   "%tmp_8_i_mid2 = select i1 %tmp_10_i, i1 %tmp_8_i, i1 %tmp_8_i_mid1" [LKof_hls_opt.cpp:347]   --->   Operation 61 'select' 'tmp_8_i_mid2' <Predicate = (!exitcond_flatten)> <Delay = 0.17> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%tmp = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %row, i32 1, i32 15)" [LKof_hls_opt.cpp:375]   --->   Operation 62 'partselect' 'tmp' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (1.07ns)   --->   "%icmp1 = icmp ne i15 %tmp, 0" [LKof_hls_opt.cpp:375]   --->   Operation 63 'icmp' 'icmp1' <Predicate = (!exitcond_flatten)> <Delay = 1.07> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_1 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %row_i, i32 1, i32 15)" [LKof_hls_opt.cpp:375]   --->   Operation 64 'partselect' 'tmp_1' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (1.07ns)   --->   "%icmp2 = icmp ne i15 %tmp_1, 0" [LKof_hls_opt.cpp:375]   --->   Operation 65 'icmp' 'icmp2' <Predicate = (!exitcond_flatten)> <Delay = 1.07> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/1] (0.17ns)   --->   "%tmp_9_i_mid2 = select i1 %tmp_10_i, i1 %icmp2, i1 %icmp1" [LKof_hls_opt.cpp:375]   --->   Operation 66 'select' 'tmp_9_i_mid2' <Predicate = (!exitcond_flatten)> <Delay = 0.17> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 67 [1/1] (0.35ns)   --->   "%row_i_mid2 = select i1 %tmp_10_i, i16 %row_i, i16 %row" [LKof_hls_opt.cpp:334]   --->   Operation 67 'select' 'row_i_mid2' <Predicate = (!exitcond_flatten)> <Delay = 0.35> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (1.10ns)   --->   "%tmp_12_i = icmp ult i16 %col_i_mid2, %width_read" [LKof_hls_opt.cpp:340]   --->   Operation 68 'icmp' 'tmp_12_i' <Predicate = (!exitcond_flatten)> <Delay = 1.10> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %tmp_12_i, label %.preheader199.preheader.i, label %.loopexit.i" [LKof_hls_opt.cpp:340]   --->   Operation 69 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_13_i = zext i16 %col_i_mid2 to i64" [LKof_hls_opt.cpp:343]   --->   Operation 70 'zext' 'tmp_13_i' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%lpf_lines_buffer_V_1_1 = getelementptr [480 x i20]* @lpf_lines_buffer_V_1, i64 0, i64 %tmp_13_i" [LKof_hls_opt.cpp:343]   --->   Operation 71 'getelementptr' 'lpf_lines_buffer_V_1_1' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_2 : Operation 72 [2/2] (1.23ns)   --->   "%lpf_lines_buffer_V_1_2 = load i20* %lpf_lines_buffer_V_1_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 72 'load' 'lpf_lines_buffer_V_1_2' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%lpf_lines_buffer_V_2_1 = getelementptr [480 x i20]* @lpf_lines_buffer_V_2, i64 0, i64 %tmp_13_i" [LKof_hls_opt.cpp:343]   --->   Operation 73 'getelementptr' 'lpf_lines_buffer_V_2_1' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_2 : Operation 74 [2/2] (1.23ns)   --->   "%lpf_lines_buffer_V_2_2 = load i20* %lpf_lines_buffer_V_2_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 74 'load' 'lpf_lines_buffer_V_2_2' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%lpf_lines_buffer_V_3_1 = getelementptr [480 x i20]* @lpf_lines_buffer_V_3, i64 0, i64 %tmp_13_i" [LKof_hls_opt.cpp:343]   --->   Operation 75 'getelementptr' 'lpf_lines_buffer_V_3_1' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_2 : Operation 76 [2/2] (1.23ns)   --->   "%lpf_lines_buffer_V_3_2 = load i20* %lpf_lines_buffer_V_3_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 76 'load' 'lpf_lines_buffer_V_3_2' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%lpf_lines_buffer_V_4_1 = getelementptr [480 x i20]* @lpf_lines_buffer_V_4, i64 0, i64 %tmp_13_i" [LKof_hls_opt.cpp:343]   --->   Operation 77 'getelementptr' 'lpf_lines_buffer_V_4_1' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_2 : Operation 78 [2/2] (1.23ns)   --->   "%lpf_lines_buffer_V_4_2 = load i20* %lpf_lines_buffer_V_4_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 78 'load' 'lpf_lines_buffer_V_4_2' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_2 : Operation 79 [1/1] (0.28ns)   --->   "%or_cond_i = and i1 %tmp_12_i, %tmp_8_i_mid2" [LKof_hls_opt.cpp:347]   --->   Operation 79 'and' 'or_cond_i' <Predicate = (!exitcond_flatten)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "br i1 %or_cond_i, label %1, label %.loopexit._crit_edge.i" [LKof_hls_opt.cpp:347]   --->   Operation 80 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%empty = call { i8, i1 } @_ssdm_op_Read.axis.volatile.i8P.i1P(i8* %inp1_img_V_data_V, i1* %inp1_img_V_last_V)" [LKof_hls_opt.cpp:352]   --->   Operation 81 'read' 'empty' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_data_V = extractvalue { i8, i1 } %empty, 0" [LKof_hls_opt.cpp:352]   --->   Operation 82 'extractvalue' 'tmp_data_V' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%empty_23 = call { i8, i1 } @_ssdm_op_Read.axis.volatile.i8P.i1P(i8* %inp2_img_V_data_V, i1* %inp2_img_V_last_V)" [LKof_hls_opt.cpp:353]   --->   Operation 83 'read' 'empty_23' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_data_V_1 = extractvalue { i8, i1 } %empty_23, 0" [LKof_hls_opt.cpp:353]   --->   Operation 84 'extractvalue' 'tmp_data_V_1' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_2 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %col_i_mid2, i32 1, i32 15)" [LKof_hls_opt.cpp:375]   --->   Operation 85 'partselect' 'tmp_2' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (1.07ns)   --->   "%icmp = icmp ne i15 %tmp_2, 0" [LKof_hls_opt.cpp:375]   --->   Operation 86 'icmp' 'icmp' <Predicate = (!exitcond_flatten)> <Delay = 1.07> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 87 [1/1] (0.28ns)   --->   "%tmp_17_i = and i1 %tmp_9_i_mid2, %icmp" [LKof_hls_opt.cpp:375]   --->   Operation 87 'and' 'tmp_17_i' <Predicate = (!exitcond_flatten)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.28ns)   --->   "%tmp_19_i = and i1 %or_cond_i, %tmp_17_i" [LKof_hls_opt.cpp:375]   --->   Operation 88 'and' 'tmp_19_i' <Predicate = (!exitcond_flatten)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.65ns)   --->   "br i1 %tmp_19_i, label %2, label %._crit_edge201.i" [LKof_hls_opt.cpp:375]   --->   Operation 89 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.65>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "br i1 %tmp_17_i, label %3, label %._crit_edge202.i" [LKof_hls_opt.cpp:387]   --->   Operation 90 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.85ns)   --->   "%col = add i16 %col_i_mid2, 1" [LKof_hls_opt.cpp:334]   --->   Operation 91 'add' 'col' <Predicate = (!exitcond_flatten)> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.47>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%window_0_V_load = load i24* %window_0_V" [LKof_hls_opt.cpp:377]   --->   Operation 92 'load' 'window_0_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%window_1_V_load = load i24* %window_1_V"   --->   Operation 93 'load' 'window_1_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%window_2_V_load = load i24* %window_2_V"   --->   Operation 94 'load' 'window_2_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%window_22_V_load = load i24* %window_22_V"   --->   Operation 95 'load' 'window_22_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%window_5_V_load = load i24* %window_5_V" [LKof_hls_opt.cpp:377]   --->   Operation 96 'load' 'window_5_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%window_6_V_load = load i24* %window_6_V"   --->   Operation 97 'load' 'window_6_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%window_7_V_load = load i24* %window_7_V"   --->   Operation 98 'load' 'window_7_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%window_21_V_load = load i24* %window_21_V"   --->   Operation 99 'load' 'window_21_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%window_10_V_load = load i24* %window_10_V" [LKof_hls_opt.cpp:377]   --->   Operation 100 'load' 'window_10_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%window_11_V_load = load i24* %window_11_V"   --->   Operation 101 'load' 'window_11_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%window_12_V_load = load i24* %window_12_V"   --->   Operation 102 'load' 'window_12_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%window_20_V_load = load i24* %window_20_V" [LKof_hls_opt.cpp:377]   --->   Operation 103 'load' 'window_20_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%window_15_V_load = load i24* %window_15_V" [LKof_hls_opt.cpp:377]   --->   Operation 104 'load' 'window_15_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%window_16_V_load = load i24* %window_16_V"   --->   Operation 105 'load' 'window_16_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%window_17_V_load = load i24* %window_17_V"   --->   Operation 106 'load' 'window_17_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%window_23_V_1 = load i24* %window_23_V"   --->   Operation 107 'load' 'window_23_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%window_3_V_1 = load i24* %window_3_V"   --->   Operation 108 'load' 'window_3_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (0.00ns)   --->   "%window_8_V_1 = load i24* %window_8_V"   --->   Operation 109 'load' 'window_8_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "%window_13_V_1 = load i24* %window_13_V"   --->   Operation 110 'load' 'window_13_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%window_18_V_1 = load i24* %window_18_V"   --->   Operation 111 'load' 'window_18_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "store i24 %window_18_V_1, i24* %window_17_V"   --->   Operation 112 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "store i24 %window_17_V_load, i24* %window_16_V"   --->   Operation 113 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "store i24 %window_16_V_load, i24* %window_15_V"   --->   Operation 114 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "store i24 %window_21_V_load, i24* %window_20_V"   --->   Operation 115 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 116 [1/1] (0.00ns)   --->   "store i24 %window_13_V_1, i24* %window_12_V"   --->   Operation 116 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 117 [1/1] (0.00ns)   --->   "store i24 %window_12_V_load, i24* %window_11_V"   --->   Operation 117 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 118 [1/1] (0.00ns)   --->   "store i24 %window_11_V_load, i24* %window_10_V"   --->   Operation 118 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "store i24 %window_22_V_load, i24* %window_21_V"   --->   Operation 119 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "store i24 %window_8_V_1, i24* %window_7_V"   --->   Operation 120 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "store i24 %window_7_V_load, i24* %window_6_V"   --->   Operation 121 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "store i24 %window_6_V_load, i24* %window_5_V"   --->   Operation 122 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "store i24 %window_23_V_1, i24* %window_22_V"   --->   Operation 123 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "store i24 %window_3_V_1, i24* %window_2_V"   --->   Operation 124 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "store i24 %window_2_V_load, i24* %window_1_V"   --->   Operation 125 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 126 [1/1] (0.00ns)   --->   "store i24 %window_1_V_load, i24* %window_0_V"   --->   Operation 126 'store' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten, label %.exit, label %.reset" [LKof_hls_opt.cpp:334]   --->   Operation 127 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 128 [1/2] (1.23ns)   --->   "%lpf_lines_buffer_V_1_2 = load i20* %lpf_lines_buffer_V_1_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 128 'load' 'lpf_lines_buffer_V_1_2' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_3 : Operation 129 [1/1] (0.00ns)   --->   "%pixels_0_V = zext i20 %lpf_lines_buffer_V_1_2 to i24" [LKof_hls_opt.cpp:343]   --->   Operation 129 'zext' 'pixels_0_V' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 130 [1/2] (1.23ns)   --->   "%lpf_lines_buffer_V_2_2 = load i20* %lpf_lines_buffer_V_2_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 130 'load' 'lpf_lines_buffer_V_2_2' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "%pixels_1_V = zext i20 %lpf_lines_buffer_V_2_2 to i24" [LKof_hls_opt.cpp:343]   --->   Operation 131 'zext' 'pixels_1_V' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] (1.23ns)   --->   "store i20 %lpf_lines_buffer_V_2_2, i20* %lpf_lines_buffer_V_1_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 132 'store' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_3 : Operation 133 [1/2] (1.23ns)   --->   "%lpf_lines_buffer_V_3_2 = load i20* %lpf_lines_buffer_V_3_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 133 'load' 'lpf_lines_buffer_V_3_2' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_3 : Operation 134 [1/1] (0.00ns)   --->   "%pixels_2_V = zext i20 %lpf_lines_buffer_V_3_2 to i24" [LKof_hls_opt.cpp:343]   --->   Operation 134 'zext' 'pixels_2_V' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 135 [1/1] (1.23ns)   --->   "store i20 %lpf_lines_buffer_V_3_2, i20* %lpf_lines_buffer_V_2_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 135 'store' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_3 : Operation 136 [1/2] (1.23ns)   --->   "%lpf_lines_buffer_V_4_2 = load i20* %lpf_lines_buffer_V_4_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 136 'load' 'lpf_lines_buffer_V_4_2' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_3 : Operation 137 [1/1] (0.00ns)   --->   "%pixels_3_V = zext i20 %lpf_lines_buffer_V_4_2 to i24" [LKof_hls_opt.cpp:343]   --->   Operation 137 'zext' 'pixels_3_V' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 138 [1/1] (1.23ns)   --->   "store i20 %lpf_lines_buffer_V_4_2, i20* %lpf_lines_buffer_V_3_1, align 4" [LKof_hls_opt.cpp:343]   --->   Operation 138 'store' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_3 : Operation 139 [1/1] (0.00ns)   --->   "store i24 %pixels_3_V, i24* %window_18_V" [LKof_hls_opt.cpp:343]   --->   Operation 139 'store' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 140 [1/1] (0.00ns)   --->   "store i24 %pixels_2_V, i24* %window_13_V" [LKof_hls_opt.cpp:343]   --->   Operation 140 'store' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 141 [1/1] (0.00ns)   --->   "store i24 %pixels_1_V, i24* %window_8_V" [LKof_hls_opt.cpp:343]   --->   Operation 141 'store' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "store i24 %pixels_0_V, i24* %window_3_V" [LKof_hls_opt.cpp:343]   --->   Operation 142 'store' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "br label %.loopexit.i"   --->   Operation 143 'br' <Predicate = (!exitcond_flatten & tmp_12_i)> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_V_1_trunc_i = zext i8 %tmp_data_V to i12" [LKof_hls_opt.cpp:352]   --->   Operation 144 'zext' 'tmp_V_1_trunc_i' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+ST_3 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_14_i = call i20 @_ssdm_op_BitConcatenate.i20.i8.i12(i8 %tmp_data_V_1, i12 %tmp_V_1_trunc_i)" [LKof_hls_opt.cpp:353]   --->   Operation 145 'bitconcatenate' 'tmp_14_i' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+ST_3 : Operation 146 [1/1] (0.00ns)   --->   "%p_Result_s = zext i20 %tmp_14_i to i24" [LKof_hls_opt.cpp:359]   --->   Operation 146 'zext' 'p_Result_s' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+ST_3 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_15_i = zext i16 %col_i_mid2 to i64" [LKof_hls_opt.cpp:361]   --->   Operation 147 'zext' 'tmp_15_i' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+ST_3 : Operation 148 [1/1] (0.00ns)   --->   "%lpf_lines_buffer_V_4_3 = getelementptr [480 x i20]* @lpf_lines_buffer_V_4, i64 0, i64 %tmp_15_i" [LKof_hls_opt.cpp:361]   --->   Operation 148 'getelementptr' 'lpf_lines_buffer_V_4_3' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+ST_3 : Operation 149 [1/1] (1.23ns)   --->   "store i20 %tmp_14_i, i20* %lpf_lines_buffer_V_4_3, align 4" [LKof_hls_opt.cpp:361]   --->   Operation 149 'store' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 20> <Depth = 480> <RAM>
+ST_3 : Operation 150 [1/1] (0.00ns)   --->   "store i24 %p_Result_s, i24* %window_23_V" [LKof_hls_opt.cpp:361]   --->   Operation 150 'store' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+ST_3 : Operation 151 [1/1] (0.00ns)   --->   "br label %.loopexit._crit_edge.i" [LKof_hls_opt.cpp:362]   --->   Operation 151 'br' <Predicate = (!exitcond_flatten & or_cond_i)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.96>
+ST_4 : Operation 152 [1/1] (0.00ns)   --->   "%window_23_V_load = load i24* %window_23_V" [LKof_hls_opt.cpp:377]   --->   Operation 152 'load' 'window_23_V_load' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 0.00>
+ST_4 : Operation 153 [1/1] (0.00ns)   --->   "%window_3_V_load = load i24* %window_3_V" [LKof_hls_opt.cpp:377]   --->   Operation 153 'load' 'window_3_V_load' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 0.00>
+ST_4 : Operation 154 [1/1] (0.00ns)   --->   "%window_8_V_load = load i24* %window_8_V" [LKof_hls_opt.cpp:377]   --->   Operation 154 'load' 'window_8_V_load' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 0.00>
+ST_4 : Operation 155 [1/1] (0.00ns)   --->   "%window_13_V_load = load i24* %window_13_V" [LKof_hls_opt.cpp:377]   --->   Operation 155 'load' 'window_13_V_load' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 0.00>
+ST_4 : Operation 156 [1/1] (0.00ns)   --->   "%window_18_V_load = load i24* %window_18_V" [LKof_hls_opt.cpp:377]   --->   Operation 156 'load' 'window_18_V_load' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 0.00>
+ST_4 : Operation 157 [2/2] (3.96ns)   --->   "%two_pixels_V = call fastcc i24 @hls_isotropic_kernel(i24 %window_0_V_load, i24 %window_1_V_load, i24 %window_2_V_load, i24 %window_3_V_1, i24 %window_3_V_load, i24 %window_5_V_load, i24 %window_6_V_load, i24 %window_7_V_load, i24 %window_8_V_1, i24 %window_8_V_load, i24 %window_10_V_load, i24 %window_11_V_load, i24 %window_12_V_load, i24 %window_13_V_1, i24 %window_13_V_load, i24 %window_15_V_load, i24 %window_16_V_load, i24 %window_17_V_load, i24 %window_18_V_1, i24 %window_18_V_load, i24 %window_20_V_load, i24 %window_21_V_load, i24 %window_22_V_load, i24 %window_23_V_1, i24 %window_23_V_load)" [LKof_hls_opt.cpp:377]   --->   Operation 157 'call' 'two_pixels_V' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 3.96> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 4.03>
+ST_5 : Operation 158 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @L1_L2_str)"   --->   Operation 158 'specloopname' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 159 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 12544, i64 230400, i64 0)"   --->   Operation 159 'speclooptripcount' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 160 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([3 x i8]* @p_str1) nounwind" [LKof_hls_opt.cpp:335]   --->   Operation 160 'specloopname' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 161 [1/1] (0.00ns)   --->   "%tmp_11_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([3 x i8]* @p_str1)" [LKof_hls_opt.cpp:335]   --->   Operation 161 'specregionbegin' 'tmp_11_i' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 162 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind" [LKof_hls_opt.cpp:336]   --->   Operation 162 'specpipeline' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 163 [1/2] (1.54ns)   --->   "%two_pixels_V = call fastcc i24 @hls_isotropic_kernel(i24 %window_0_V_load, i24 %window_1_V_load, i24 %window_2_V_load, i24 %window_3_V_1, i24 %window_3_V_load, i24 %window_5_V_load, i24 %window_6_V_load, i24 %window_7_V_load, i24 %window_8_V_1, i24 %window_8_V_load, i24 %window_10_V_load, i24 %window_11_V_load, i24 %window_12_V_load, i24 %window_13_V_1, i24 %window_13_V_load, i24 %window_15_V_load, i24 %window_16_V_load, i24 %window_17_V_load, i24 %window_18_V_1, i24 %window_18_V_load, i24 %window_20_V_load, i24 %window_21_V_load, i24 %window_22_V_load, i24 %window_23_V_1, i24 %window_23_V_load)" [LKof_hls_opt.cpp:377]   --->   Operation 163 'call' 'two_pixels_V' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 1.54> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 164 [1/1] (0.00ns)   --->   "%filt_out1_V = trunc i24 %two_pixels_V to i12" [LKof_hls_opt.cpp:378]   --->   Operation 164 'trunc' 'filt_out1_V' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 0.00>
+ST_5 : Operation 165 [1/1] (0.00ns)   --->   "%filt_out2_V = call i12 @_ssdm_op_PartSelect.i12.i24.i32.i32(i24 %two_pixels_V, i32 12, i32 23)" [LKof_hls_opt.cpp:379]   --->   Operation 165 'partselect' 'filt_out2_V' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 0.00>
+ST_5 : Operation 166 [1/1] (0.65ns)   --->   "br label %._crit_edge201.i" [LKof_hls_opt.cpp:380]   --->   Operation 166 'br' <Predicate = (!exitcond_flatten & tmp_19_i)> <Delay = 0.65>
+ST_5 : Operation 167 [1/1] (0.00ns)   --->   "%p_1_i = phi i12 [ %filt_out1_V, %2 ], [ 0, %.loopexit._crit_edge.i ]"   --->   Operation 167 'phi' 'p_1_i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 168 [1/1] (0.00ns)   --->   "%p_2_i = phi i12 [ %filt_out2_V, %2 ], [ 0, %.loopexit._crit_edge.i ]"   --->   Operation 168 'phi' 'p_2_i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 169 [1/1] (1.83ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i12P(i12* %out1_img_V, i12 %p_1_i)" [LKof_hls_opt.cpp:389]   --->   Operation 169 'write' <Predicate = (tmp_17_i)> <Delay = 1.83> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 0> <FIFO>
+ST_5 : Operation 170 [1/1] (1.83ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i12P(i12* %out2_img_V, i12 %p_2_i)" [LKof_hls_opt.cpp:390]   --->   Operation 170 'write' <Predicate = (tmp_17_i)> <Delay = 1.83> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 0> <FIFO>
+ST_5 : Operation 171 [1/1] (0.00ns)   --->   "br label %._crit_edge202.i" [LKof_hls_opt.cpp:391]   --->   Operation 171 'br' <Predicate = (tmp_17_i)> <Delay = 0.00>
+ST_5 : Operation 172 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecRegionEnd([3 x i8]* @p_str1, i32 %tmp_11_i)" [LKof_hls_opt.cpp:394]   --->   Operation 172 'specregionend' 'empty_24' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 173 [1/1] (0.00ns)   --->   "br label %0" [LKof_hls_opt.cpp:334]   --->   Operation 173 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 0.00>
+ST_6 : Operation 174 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 174 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 3.39ns
+The critical path consists of the following:
+	wire read on port 'width' [37]  (0 ns)
+	'add' operation ('tmp_5_i', LKof_hls_opt.cpp:334) [52]  (0.853 ns)
+	'mul' operation of DSP[55] ('bound', LKof_hls_opt.cpp:334) [55]  (2.53 ns)
+
+ <State 2>: 3.78ns
+The critical path consists of the following:
+	'phi' operation ('col') with incoming values : ('col', LKof_hls_opt.cpp:334) [60]  (0 ns)
+	'icmp' operation ('tmp_10_i', LKof_hls_opt.cpp:334) [83]  (1.1 ns)
+	'select' operation ('col_i_mid2', LKof_hls_opt.cpp:334) [105]  (0.357 ns)
+	'icmp' operation ('tmp_12_i', LKof_hls_opt.cpp:340) [119]  (1.1 ns)
+	'and' operation ('or_cond_i', LKof_hls_opt.cpp:347) [144]  (0.287 ns)
+	'and' operation ('tmp_19_i', LKof_hls_opt.cpp:375) [163]  (0.287 ns)
+	multiplexor before 'phi' operation ('filt_out1.V') with incoming values : ('filt_out1.V', LKof_hls_opt.cpp:378) [176]  (0.656 ns)
+
+ <State 3>: 2.47ns
+The critical path consists of the following:
+	'load' operation ('lpf_lines_buffer_V_2_2', LKof_hls_opt.cpp:343) on array 'lpf_lines_buffer_V_2' [127]  (1.24 ns)
+	'store' operation (LKof_hls_opt.cpp:343) of variable 'lpf_lines_buffer_V_2_2', LKof_hls_opt.cpp:343 on array 'lpf_lines_buffer_V_1' [129]  (1.24 ns)
+
+ <State 4>: 3.96ns
+The critical path consists of the following:
+	'load' operation ('window_23_V_load', LKof_hls_opt.cpp:377) on local variable 'window[23].V' [166]  (0 ns)
+	'call' operation ('two_pixels.V', LKof_hls_opt.cpp:377) to 'hls_isotropic_kernel' [171]  (3.96 ns)
+
+ <State 5>: 4.03ns
+The critical path consists of the following:
+	'call' operation ('two_pixels.V', LKof_hls_opt.cpp:377) to 'hls_isotropic_kernel' [171]  (1.54 ns)
+	multiplexor before 'phi' operation ('filt_out1.V') with incoming values : ('filt_out1.V', LKof_hls_opt.cpp:378) [176]  (0.656 ns)
+	'phi' operation ('filt_out1.V') with incoming values : ('filt_out1.V', LKof_hls_opt.cpp:378) [176]  (0 ns)
+	fifo write on port 'out1_img_V' (LKof_hls_opt.cpp:389) [180]  (1.84 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

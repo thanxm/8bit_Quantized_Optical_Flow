@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="hls_LK.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_hls_LK_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="AESL_inst_hls_LK_group">
+      <obj_property name="label">AESL_inst_hls_LK</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/hls_twoIsotropicFilt_U0_activity">
+         <obj_property name="ElementShortName">hls_twoIsotropicFilt_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">hls_twoIsotropicFilt_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/hls_SpatialTemporalD_U0_activity">
+         <obj_property name="ElementShortName">hls_SpatialTemporalD_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">hls_SpatialTemporalD_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/hls_ComputeIntegrals_U0_activity">
+         <obj_property name="ElementShortName">hls_ComputeIntegrals_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">hls_ComputeIntegrals_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/hls_ComputeVectors_U0_activity">
+         <obj_property name="ElementShortName">hls_ComputeVectors_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">hls_ComputeVectors_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="hls_twoIsotropicFilt_U0_group">
+         <obj_property name="label">hls_twoIsotropicFilt_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="hls_twoIsotropicFilt_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="hls_twoIsotropicFilt_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="hls_twoIsotropicFilt_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out1_img_V_group">
+               <obj_property name="label">out1_img_V(flt1_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/out1_img_V_blk_n">
+                  <obj_property name="ElementShortName">out1_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out1_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/out1_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/out1_img_V_full_n">
+                  <obj_property name="ElementShortName">out1_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out1_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/out1_img_V_write">
+                  <obj_property name="ElementShortName">out1_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">out1_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out2_img_V_group">
+               <obj_property name="label">out2_img_V(flt2_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/out2_img_V_blk_n">
+                  <obj_property name="ElementShortName">out2_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out2_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/out2_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/out2_img_V_full_n">
+                  <obj_property name="ElementShortName">out2_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out2_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/out2_img_V_write">
+                  <obj_property name="ElementShortName">out2_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">out2_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="height_out_group">
+               <obj_property name="label">height_out(height_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/height_out_blk_n">
+                  <obj_property name="ElementShortName">height_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">height_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/height_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/height_out_full_n">
+                  <obj_property name="ElementShortName">height_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">height_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/height_out_write">
+                  <obj_property name="ElementShortName">height_out_write</obj_property>
+                  <obj_property name="ObjectShortName">height_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="width_out_group">
+               <obj_property name="label">width_out(width_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/width_out_blk_n">
+                  <obj_property name="ElementShortName">width_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">width_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/width_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/width_out_full_n">
+                  <obj_property name="ElementShortName">width_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">width_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_twoIsotropicFilt_U0/width_out_write">
+                  <obj_property name="ElementShortName">width_out_write</obj_property>
+                  <obj_property name="ObjectShortName">width_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="hls_SpatialTemporalD_U0_group">
+         <obj_property name="label">hls_SpatialTemporalD_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="hls_SpatialTemporalD_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="inp1_img_V_group">
+               <obj_property name="label">inp1_img_V(flt1_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/inp1_img_V_blk_n">
+                  <obj_property name="ElementShortName">inp1_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inp1_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/inp1_img_V_dout">
+                  <obj_property name="ElementShortName">inp1_img_V_dout[11:0]</obj_property>
+                  <obj_property name="ObjectShortName">inp1_img_V_dout[11:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/inp1_img_V_empty_n">
+                  <obj_property name="ElementShortName">inp1_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inp1_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/inp1_img_V_read">
+                  <obj_property name="ElementShortName">inp1_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">inp1_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="inp2_img_V_group">
+               <obj_property name="label">inp2_img_V(flt2_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/inp2_img_V_blk_n">
+                  <obj_property name="ElementShortName">inp2_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">inp2_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/inp2_img_V_dout">
+                  <obj_property name="ElementShortName">inp2_img_V_dout[11:0]</obj_property>
+                  <obj_property name="ObjectShortName">inp2_img_V_dout[11:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/inp2_img_V_empty_n">
+                  <obj_property name="ElementShortName">inp2_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">inp2_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/inp2_img_V_read">
+                  <obj_property name="ElementShortName">inp2_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">inp2_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="height_group">
+               <obj_property name="label">height(height_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/height_blk_n">
+                  <obj_property name="ElementShortName">height_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">height_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/height_dout">
+                  <obj_property name="ElementShortName">height_dout[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">height_dout[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/height_empty_n">
+                  <obj_property name="ElementShortName">height_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">height_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/height_read">
+                  <obj_property name="ElementShortName">height_read</obj_property>
+                  <obj_property name="ObjectShortName">height_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="width_group">
+               <obj_property name="label">width(width_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/width_blk_n">
+                  <obj_property name="ElementShortName">width_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">width_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/width_dout">
+                  <obj_property name="ElementShortName">width_dout[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">width_dout[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/width_empty_n">
+                  <obj_property name="ElementShortName">width_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">width_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/width_read">
+                  <obj_property name="ElementShortName">width_read</obj_property>
+                  <obj_property name="ObjectShortName">width_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="hls_SpatialTemporalD_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="hls_SpatialTemporalD_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="out_Ix_img_V_group">
+               <obj_property name="label">out_Ix_img_V(Dx1_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_Ix_img_V_blk_n">
+                  <obj_property name="ElementShortName">out_Ix_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_Ix_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_Ix_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_Ix_img_V_full_n">
+                  <obj_property name="ElementShortName">out_Ix_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_Ix_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_Ix_img_V_write">
+                  <obj_property name="ElementShortName">out_Ix_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">out_Ix_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_Iy_img_V_group">
+               <obj_property name="label">out_Iy_img_V(Dy1_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_Iy_img_V_blk_n">
+                  <obj_property name="ElementShortName">out_Iy_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_Iy_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_Iy_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_Iy_img_V_full_n">
+                  <obj_property name="ElementShortName">out_Iy_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_Iy_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_Iy_img_V_write">
+                  <obj_property name="ElementShortName">out_Iy_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">out_Iy_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="out_It_img_V_group">
+               <obj_property name="label">out_It_img_V(Dt_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_It_img_V_blk_n">
+                  <obj_property name="ElementShortName">out_It_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">out_It_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_It_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_It_img_V_full_n">
+                  <obj_property name="ElementShortName">out_It_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">out_It_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/out_It_img_V_write">
+                  <obj_property name="ElementShortName">out_It_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">out_It_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="height_out_group">
+               <obj_property name="label">height_out(height_c9_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/height_out_blk_n">
+                  <obj_property name="ElementShortName">height_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">height_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/height_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/height_out_full_n">
+                  <obj_property name="ElementShortName">height_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">height_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/height_out_write">
+                  <obj_property name="ElementShortName">height_out_write</obj_property>
+                  <obj_property name="ObjectShortName">height_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="width_out_group">
+               <obj_property name="label">width_out(width_c10_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/width_out_blk_n">
+                  <obj_property name="ElementShortName">width_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">width_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/width_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/width_out_full_n">
+                  <obj_property name="ElementShortName">width_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">width_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_SpatialTemporalD_U0/width_out_write">
+                  <obj_property name="ElementShortName">width_out_write</obj_property>
+                  <obj_property name="ObjectShortName">width_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="hls_ComputeIntegrals_U0_group">
+         <obj_property name="label">hls_ComputeIntegrals_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="hls_ComputeIntegrals_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="Ix_img_V_group">
+               <obj_property name="label">Ix_img_V(Dx1_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/Ix_img_V_blk_n">
+                  <obj_property name="ElementShortName">Ix_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">Ix_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/Ix_img_V_dout">
+                  <obj_property name="ElementShortName">Ix_img_V_dout[12:0]</obj_property>
+                  <obj_property name="ObjectShortName">Ix_img_V_dout[12:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/Ix_img_V_empty_n">
+                  <obj_property name="ElementShortName">Ix_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">Ix_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/Ix_img_V_read">
+                  <obj_property name="ElementShortName">Ix_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">Ix_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="Iy_img_V_group">
+               <obj_property name="label">Iy_img_V(Dy1_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/Iy_img_V_blk_n">
+                  <obj_property name="ElementShortName">Iy_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">Iy_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/Iy_img_V_dout">
+                  <obj_property name="ElementShortName">Iy_img_V_dout[12:0]</obj_property>
+                  <obj_property name="ObjectShortName">Iy_img_V_dout[12:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/Iy_img_V_empty_n">
+                  <obj_property name="ElementShortName">Iy_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">Iy_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/Iy_img_V_read">
+                  <obj_property name="ElementShortName">Iy_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">Iy_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="It_img_V_group">
+               <obj_property name="label">It_img_V(Dt_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/It_img_V_blk_n">
+                  <obj_property name="ElementShortName">It_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">It_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/It_img_V_dout">
+                  <obj_property name="ElementShortName">It_img_V_dout[12:0]</obj_property>
+                  <obj_property name="ObjectShortName">It_img_V_dout[12:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/It_img_V_empty_n">
+                  <obj_property name="ElementShortName">It_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">It_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/It_img_V_read">
+                  <obj_property name="ElementShortName">It_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">It_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="height_group">
+               <obj_property name="label">height(height_c9_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/height_blk_n">
+                  <obj_property name="ElementShortName">height_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">height_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/height_dout">
+                  <obj_property name="ElementShortName">height_dout[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">height_dout[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/height_empty_n">
+                  <obj_property name="ElementShortName">height_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">height_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/height_read">
+                  <obj_property name="ElementShortName">height_read</obj_property>
+                  <obj_property name="ObjectShortName">height_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="width_group">
+               <obj_property name="label">width(width_c10_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/width_blk_n">
+                  <obj_property name="ElementShortName">width_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">width_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/width_dout">
+                  <obj_property name="ElementShortName">width_dout[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">width_dout[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/width_empty_n">
+                  <obj_property name="ElementShortName">width_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">width_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/width_read">
+                  <obj_property name="ElementShortName">width_read</obj_property>
+                  <obj_property name="ObjectShortName">width_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="hls_ComputeIntegrals_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="hls_ComputeIntegrals_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="A11_img_V_group">
+               <obj_property name="label">A11_img_V(A11_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A11_img_V_blk_n">
+                  <obj_property name="ElementShortName">A11_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">A11_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A11_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A11_img_V_full_n">
+                  <obj_property name="ElementShortName">A11_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">A11_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A11_img_V_write">
+                  <obj_property name="ElementShortName">A11_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">A11_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="A12_img_V_group">
+               <obj_property name="label">A12_img_V(A12_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A12_img_V_blk_n">
+                  <obj_property name="ElementShortName">A12_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">A12_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A12_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A12_img_V_full_n">
+                  <obj_property name="ElementShortName">A12_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">A12_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A12_img_V_write">
+                  <obj_property name="ElementShortName">A12_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">A12_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="A22_img_V_group">
+               <obj_property name="label">A22_img_V(A22_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A22_img_V_blk_n">
+                  <obj_property name="ElementShortName">A22_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">A22_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A22_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A22_img_V_full_n">
+                  <obj_property name="ElementShortName">A22_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">A22_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/A22_img_V_write">
+                  <obj_property name="ElementShortName">A22_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">A22_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="B1_img_V_group">
+               <obj_property name="label">B1_img_V(B1_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/B1_img_V_blk_n">
+                  <obj_property name="ElementShortName">B1_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">B1_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/B1_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/B1_img_V_full_n">
+                  <obj_property name="ElementShortName">B1_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">B1_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/B1_img_V_write">
+                  <obj_property name="ElementShortName">B1_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">B1_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="B2_img_V_group">
+               <obj_property name="label">B2_img_V(B2_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/B2_img_V_blk_n">
+                  <obj_property name="ElementShortName">B2_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">B2_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/B2_img_V_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/B2_img_V_full_n">
+                  <obj_property name="ElementShortName">B2_img_V_full_n</obj_property>
+                  <obj_property name="ObjectShortName">B2_img_V_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/B2_img_V_write">
+                  <obj_property name="ElementShortName">B2_img_V_write</obj_property>
+                  <obj_property name="ObjectShortName">B2_img_V_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="height_out_group">
+               <obj_property name="label">height_out(height_c11_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/height_out_blk_n">
+                  <obj_property name="ElementShortName">height_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">height_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/height_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/height_out_full_n">
+                  <obj_property name="ElementShortName">height_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">height_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/height_out_write">
+                  <obj_property name="ElementShortName">height_out_write</obj_property>
+                  <obj_property name="ObjectShortName">height_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="width_out_group">
+               <obj_property name="label">width_out(width_c12_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/width_out_blk_n">
+                  <obj_property name="ElementShortName">width_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">width_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/width_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/width_out_full_n">
+                  <obj_property name="ElementShortName">width_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">width_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeIntegrals_U0/width_out_write">
+                  <obj_property name="ElementShortName">width_out_write</obj_property>
+                  <obj_property name="ObjectShortName">width_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="hls_ComputeVectors_U0_group">
+         <obj_property name="label">hls_ComputeVectors_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="hls_ComputeVectors_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="A11_img_V_group">
+               <obj_property name="label">A11_img_V(A11_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A11_img_V_blk_n">
+                  <obj_property name="ElementShortName">A11_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">A11_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A11_img_V_dout">
+                  <obj_property name="ElementShortName">A11_img_V_dout[33:0]</obj_property>
+                  <obj_property name="ObjectShortName">A11_img_V_dout[33:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A11_img_V_empty_n">
+                  <obj_property name="ElementShortName">A11_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">A11_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A11_img_V_read">
+                  <obj_property name="ElementShortName">A11_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">A11_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="A12_img_V_group">
+               <obj_property name="label">A12_img_V(A12_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A12_img_V_blk_n">
+                  <obj_property name="ElementShortName">A12_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">A12_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A12_img_V_dout">
+                  <obj_property name="ElementShortName">A12_img_V_dout[33:0]</obj_property>
+                  <obj_property name="ObjectShortName">A12_img_V_dout[33:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A12_img_V_empty_n">
+                  <obj_property name="ElementShortName">A12_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">A12_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A12_img_V_read">
+                  <obj_property name="ElementShortName">A12_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">A12_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="A22_img_V_group">
+               <obj_property name="label">A22_img_V(A22_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A22_img_V_blk_n">
+                  <obj_property name="ElementShortName">A22_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">A22_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A22_img_V_dout">
+                  <obj_property name="ElementShortName">A22_img_V_dout[33:0]</obj_property>
+                  <obj_property name="ObjectShortName">A22_img_V_dout[33:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A22_img_V_empty_n">
+                  <obj_property name="ElementShortName">A22_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">A22_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/A22_img_V_read">
+                  <obj_property name="ElementShortName">A22_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">A22_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="B1_img_V_group">
+               <obj_property name="label">B1_img_V(B1_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/B1_img_V_blk_n">
+                  <obj_property name="ElementShortName">B1_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">B1_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/B1_img_V_dout">
+                  <obj_property name="ElementShortName">B1_img_V_dout[33:0]</obj_property>
+                  <obj_property name="ObjectShortName">B1_img_V_dout[33:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/B1_img_V_empty_n">
+                  <obj_property name="ElementShortName">B1_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">B1_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/B1_img_V_read">
+                  <obj_property name="ElementShortName">B1_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">B1_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="B2_img_V_group">
+               <obj_property name="label">B2_img_V(B2_img_channel_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/B2_img_V_blk_n">
+                  <obj_property name="ElementShortName">B2_img_V_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">B2_img_V_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/B2_img_V_dout">
+                  <obj_property name="ElementShortName">B2_img_V_dout[33:0]</obj_property>
+                  <obj_property name="ObjectShortName">B2_img_V_dout[33:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/B2_img_V_empty_n">
+                  <obj_property name="ElementShortName">B2_img_V_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">B2_img_V_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/B2_img_V_read">
+                  <obj_property name="ElementShortName">B2_img_V_read</obj_property>
+                  <obj_property name="ObjectShortName">B2_img_V_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="height_group">
+               <obj_property name="label">height(height_c11_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/height_blk_n">
+                  <obj_property name="ElementShortName">height_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">height_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/height_dout">
+                  <obj_property name="ElementShortName">height_dout[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">height_dout[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/height_empty_n">
+                  <obj_property name="ElementShortName">height_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">height_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/height_read">
+                  <obj_property name="ElementShortName">height_read</obj_property>
+                  <obj_property name="ObjectShortName">height_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="width_group">
+               <obj_property name="label">width(width_c12_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/width_blk_n">
+                  <obj_property name="ElementShortName">width_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">width_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/width_dout">
+                  <obj_property name="ElementShortName">width_dout[15:0]</obj_property>
+                  <obj_property name="ObjectShortName">width_dout[15:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/width_empty_n">
+                  <obj_property name="ElementShortName">width_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">width_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/width_read">
+                  <obj_property name="ElementShortName">width_read</obj_property>
+                  <obj_property name="ObjectShortName">width_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="hls_ComputeVectors_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_hls_LK_top/AESL_inst_hls_LK/hls_ComputeVectors_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="hls_ComputeVectors_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,169 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'hls_LK'" level="0">
+<item name = "Date">Mon Mar  1 13:01:09 2021
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">HLS_LK</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">5.00</item>
+<item name = "Clock uncertainty (ns)">0.62</item>
+<item name = "Estimated clock period (ns)">4.371</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">37672, 691210, 37637, 691205, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="hls_ComputeVectors_U0">hls_ComputeVectors, 12575, 230431, 12575, 230431, none</column>
+<column name="hls_twoIsotropicFilt_U0">hls_twoIsotropicFilt, 12548, 230404, 12548, 230404, none</column>
+<column name="hls_ComputeIntegrals_U0">hls_ComputeIntegrals, 37636, 691204, 37636, 691204, none</column>
+<column name="hls_SpatialTemporalD_U0">hls_SpatialTemporalD, 12550, 230406, 12550, 230406, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">0, -, 90, 541, -</column>
+<column name="Instance">40, 48, 8187, 11466, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">624, 1728, 460800, 230400, 96</specialColumn>
+<specialColumn name="Utilization (%)">6, 2, 1, 5, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="hls_ComputeIntegrals_U0">hls_ComputeIntegrals, 32, 11, 1638, 2186</column>
+<column name="hls_ComputeVectors_U0">hls_ComputeVectors, 0, 33, 3924, 4884</column>
+<column name="hls_LK_CONTROL_BUS_s_axi_U">hls_LK_CONTROL_BUS_s_axi, 0, 0, 112, 168</column>
+<column name="hls_SpatialTemporalD_U0">hls_SpatialTemporalD, 4, 3, 1051, 1024</column>
+<column name="hls_twoIsotropicFilt_U0">hls_twoIsotropicFilt, 4, 1, 1462, 3204</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="A11_img_channel_U">0, 6, 48, 10, 34, 340</column>
+<column name="A12_img_channel_U">0, 6, 48, 10, 34, 340</column>
+<column name="A22_img_channel_U">0, 6, 48, 10, 34, 340</column>
+<column name="B1_img_channel_U">0, 6, 48, 10, 34, 340</column>
+<column name="B2_img_channel_U">0, 6, 48, 10, 34, 340</column>
+<column name="Dt_img_channel_U">0, 6, 27, 10, 13, 130</column>
+<column name="Dx1_img_channel_U">0, 6, 27, 10, 13, 130</column>
+<column name="Dy1_img_channel_U">0, 6, 27, 10, 13, 130</column>
+<column name="flt1_img_channel_U">0, 6, 26, 10, 12, 120</column>
+<column name="flt2_img_channel_U">0, 6, 26, 10, 12, 120</column>
+<column name="height_c11_U">0, 5, 28, 2, 16, 32</column>
+<column name="height_c9_U">0, 5, 28, 2, 16, 32</column>
+<column name="height_c_U">0, 5, 28, 2, 16, 32</column>
+<column name="width_c10_U">0, 5, 28, 2, 16, 32</column>
+<column name="width_c12_U">0, 5, 28, 2, 16, 32</column>
+<column name="width_c_U">0, 5, 28, 2, 16, 32</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CONTROL_BUS_AWVALID">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_AWREADY">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_AWADDR">in, 6, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_WVALID">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_WREADY">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_WDATA">in, 32, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_WSTRB">in, 4, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_ARVALID">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_ARREADY">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_ARADDR">in, 6, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_RVALID">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_RREADY">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_RDATA">out, 32, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_RRESP">out, 2, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_BVALID">out, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_BREADY">in, 1, s_axi, CONTROL_BUS, scalar</column>
+<column name="s_axi_CONTROL_BUS_BRESP">out, 2, s_axi, CONTROL_BUS, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, hls_LK, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, hls_LK, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, hls_LK, return value</column>
+<column name="inp1_img_TDATA">in, 8, axis, inp1_img_V_data_V, pointer</column>
+<column name="inp1_img_TLAST">in, 1, axis, inp1_img_V_last_V, pointer</column>
+<column name="inp1_img_TVALID">in, 1, axis, inp1_img_V_last_V, pointer</column>
+<column name="inp1_img_TREADY">out, 1, axis, inp1_img_V_last_V, pointer</column>
+<column name="inp2_img_TDATA">in, 8, axis, inp2_img_V_data_V, pointer</column>
+<column name="inp2_img_TLAST">in, 1, axis, inp2_img_V_last_V, pointer</column>
+<column name="inp2_img_TVALID">in, 1, axis, inp2_img_V_last_V, pointer</column>
+<column name="inp2_img_TREADY">out, 1, axis, inp2_img_V_last_V, pointer</column>
+<column name="vx_img_TDATA">out, 8, axis, vx_img_V_data_V, pointer</column>
+<column name="vx_img_TLAST">out, 1, axis, vx_img_V_last_V, pointer</column>
+<column name="vx_img_TVALID">out, 1, axis, vx_img_V_last_V, pointer</column>
+<column name="vx_img_TREADY">in, 1, axis, vx_img_V_last_V, pointer</column>
+<column name="vy_img_TDATA">out, 8, axis, vy_img_V_data_V, pointer</column>
+<column name="vy_img_TLAST">out, 1, axis, vy_img_V_last_V, pointer</column>
+<column name="vy_img_TVALID">out, 1, axis, vy_img_V_last_V, pointer</column>
+<column name="vy_img_TREADY">in, 1, axis, vy_img_V_last_V, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">3.39</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="LKof_hls_opt.cpp:1187">call, 3.39, 3.39, -, -, -, -, -, -, -, -, -, hls_twoIsotropicFilt, -</column>
+</table>
+</item>
+</section>
+</profile>
